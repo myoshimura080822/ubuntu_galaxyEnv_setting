@@ -41,6 +41,7 @@ sailfish_path=$source_dir'/'$sailfish_name
 galaxy_path=/usr/local/$1/galaxy-dist
 galaxy_ini='universe_wsgi.ini'
 galaxy_dep_dir='dependency_dir'
+GALAXY_MASTER_API_KEY=`date --rfc-3339=ns | md5sum | cut -f 1 -d ' '`
 
 chk_samtools_path=`echo $PATH | grep $samtools_path`
 chk_sailfish_path=`echo $PATH | grep -e $sailfish_path/bin`
@@ -51,6 +52,9 @@ echo $bashrc_path
 echo $chk_samtools_path
 echo $chk_sailfish_path
 echo $chk_sailfish_lib
+
+
+
 
 # methods
 create_dir()
@@ -187,6 +191,8 @@ setting_galaxy()
         
         sed -i -e "s/#tool_dependency_dir/tool_dependency_dir/" $galaxy_path/$galaxy_ini
         sed -i -e "s/tool_dependency_dir = \(.*\)/tool_dependency_dir = $galaxy_dep_dir/" $galaxy_path/$galaxy_ini
+        sed -i -e "s/#master_api_key/master_api_key/" $galaxy_path/$galaxy_ini
+        sed -i -e "s/master_api_key\(.*\)/master_api_key = $GALAXY_MASTER_API_KEY/" $galaxy_path/$galaxy_ini
     else
         echo "galaxy-dist Dir not found."
     fi

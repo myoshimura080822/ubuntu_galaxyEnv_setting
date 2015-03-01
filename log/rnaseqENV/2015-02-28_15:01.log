@@ -1,0 +1,477 @@
+-e >>>>> start r_prep ...
+ 
+
+R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> is.installed <- function(mypkg){
++     is.element(mypkg, installed.packages()[,1])
++ }
+> 
+> if (!is.installed("Mus.musculus")){
++ 	
++     install.packages('lazyeval', repos="http://cran.rstudio.com/")
++     install.packages('dplyr', repos="http://cran.rstudio.com/")
++ 	install.packages('plyr', repos="http://cran.rstudio.com/")
++ 	install.packages('tidyr', repos="http://cran.rstudio.com/")
++ 	install.packages('stringr', repos="http://cran.rstudio.com/")
++ 
++ 	source("http://bioconductor.org/biocLite.R")
++     biocLite("BiocUpgrade")
++     biocLite("ReportingTools")
++ 	biocLite("Mus.musculus")
++ 	biocLite("limma")
++ 	biocLite("edgeR")
++ }
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Warning: dependency ‘lazyeval’ is not available
+trying URL 'http://cran.rstudio.com/src/contrib/dplyr_0.4.1.tar.gz'
+Content type 'application/x-gzip' length 891010 bytes (870 Kb)
+opened URL
+==================================================
+downloaded 870 Kb
+
+ERROR: dependency ‘lazyeval’ is not available for package ‘dplyr’
+* removing ‘/usr/local/lib/R/site-library/dplyr’
+
+The downloaded source packages are in
+	‘/tmp/RtmpmIp9kD/downloaded_packages’
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'http://cran.rstudio.com/src/contrib/plyr_1.8.1.tar.gz'
+Content type 'application/x-gzip' length 393233 bytes (384 Kb)
+opened URL
+==================================================
+downloaded 384 Kb
+
+* installing *source* package ‘plyr’ ...
+** package ‘plyr’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c RcppExports.cpp -o RcppExports.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c loop-apply.cpp -o loop-apply.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c split-numeric.cpp -o split-numeric.o
+g++ -shared -o plyr.so RcppExports.o loop-apply.o split-numeric.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/plyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (plyr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpmIp9kD/downloaded_packages’
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'http://cran.rstudio.com/src/contrib/stringr_0.6.2.tar.gz'
+Content type 'application/x-gzip' length 20636 bytes (20 Kb)
+opened URL
+==================================================
+downloaded 20 Kb
+
+* installing *source* package ‘stringr’ ...
+** package ‘stringr’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (stringr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpmIp9kD/downloaded_packages’
+Bioconductor version 2.13 (BiocInstaller 1.12.1), ?biocLite for help
+A newer version of Bioconductor is available after installing a new version of
+  R, ?BiocUpgrade for help
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'ReportingTools'
+also installing the dependencies ‘org.Hs.eg.db’, ‘GO.db’, ‘AnnotationForge’, ‘biovizBase’, ‘GenomicFeatures’, ‘VariantAnnotation’, ‘Category’, ‘GOstats’, ‘PFAM.db’, ‘ggbio’
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/org.Hs.eg.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 55283579 bytes (52.7 Mb)
+opened URL
+=================================================
+downloaded 52.7 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/GO.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 26094175 bytes (24.9 Mb)
+opened URL
+==================================================
+downloaded 24.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/AnnotationForge_1.4.4.tar.gz'
+Content type 'application/x-gzip' length 3721376 bytes (3.5 Mb)
+opened URL
+==================================================
+downloaded 3.5 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/biovizBase_1.10.8.tar.gz'
+Content type 'application/x-gzip' length 1035608 bytes (1011 Kb)
+opened URL
+==================================================
+downloaded 1011 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GenomicFeatures_1.14.5.tar.gz'
+Content type 'application/x-gzip' length 814511 bytes (795 Kb)
+opened URL
+==================================================
+downloaded 795 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/VariantAnnotation_1.8.13.tar.gz'
+Content type 'application/x-gzip' length 1280329 bytes (1.2 Mb)
+opened URL
+==================================================
+downloaded 1.2 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/Category_2.28.0.tar.gz'
+Content type 'application/x-gzip' length 598049 bytes (584 Kb)
+opened URL
+==================================================
+downloaded 584 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GOstats_2.28.0.tar.gz'
+Content type 'application/x-gzip' length 2828202 bytes (2.7 Mb)
+opened URL
+==================================================
+downloaded 2.7 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/PFAM.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 3762553 bytes (3.6 Mb)
+opened URL
+==================================================
+downloaded 3.6 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/ggbio_1.10.16.tar.gz'
+Content type 'application/x-gzip' length 1941249 bytes (1.9 Mb)
+opened URL
+==================================================
+downloaded 1.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/ReportingTools_2.2.0.tar.gz'
+Content type 'application/x-gzip' length 2514478 bytes (2.4 Mb)
+opened URL
+==================================================
+downloaded 2.4 Mb
+
+* installing *source* package ‘org.Hs.eg.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'org.Hs.eg.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/org.Hs.eg.db’
+* installing *source* package ‘GO.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'GO.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/GO.db’
+* installing *source* package ‘GenomicFeatures’ ...
+** R
+** inst
+** preparing package for lazy loading
+Error : object ‘sqliteQuickSQL’ is not exported by 'namespace:RSQLite'
+ERROR: lazy loading failed for package ‘GenomicFeatures’
+* removing ‘/usr/local/lib/R/site-library/GenomicFeatures’
+* installing *source* package ‘PFAM.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'PFAM.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/PFAM.db’
+ERROR: dependency ‘org.Hs.eg.db’ is not available for package ‘AnnotationForge’
+* removing ‘/usr/local/lib/R/site-library/AnnotationForge’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘biovizBase’
+* removing ‘/usr/local/lib/R/site-library/biovizBase’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘VariantAnnotation’
+* removing ‘/usr/local/lib/R/site-library/VariantAnnotation’
+ERROR: dependency ‘GO.db’ is not available for package ‘Category’
+* removing ‘/usr/local/lib/R/site-library/Category’
+ERROR: dependencies ‘Category’, ‘GO.db’, ‘AnnotationForge’ are not available for package ‘GOstats’
+* removing ‘/usr/local/lib/R/site-library/GOstats’
+ERROR: dependencies ‘biovizBase’, ‘GenomicFeatures’, ‘VariantAnnotation’ are not available for package ‘ggbio’
+* removing ‘/usr/local/lib/R/site-library/ggbio’
+ERROR: dependencies ‘Category’, ‘GOstats’, ‘PFAM.db’, ‘ggbio’ are not available for package ‘ReportingTools’
+* removing ‘/usr/local/lib/R/site-library/ReportingTools’
+
+The downloaded source packages are in
+	‘/tmp/RtmpmIp9kD/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'Mus.musculus'
+also installing the dependencies ‘OrganismDbi’, ‘GenomicFeatures’, ‘GO.db’, ‘org.Mm.eg.db’, ‘TxDb.Mmusculus.UCSC.mm10.knownGene’
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/OrganismDbi_1.4.0.tar.gz'
+Content type 'application/x-gzip' length 159819 bytes (156 Kb)
+opened URL
+==================================================
+downloaded 156 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GenomicFeatures_1.14.5.tar.gz'
+Content type 'application/x-gzip' length 814511 bytes (795 Kb)
+opened URL
+==================================================
+downloaded 795 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/GO.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 26094175 bytes (24.9 Mb)
+opened URL
+==================================================
+downloaded 24.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/org.Mm.eg.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 50728674 bytes (48.4 Mb)
+opened URL
+==================================================
+downloaded 48.4 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/TxDb.Mmusculus.UCSC.mm10.knownGene_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 13807340 bytes (13.2 Mb)
+opened URL
+==================================================
+downloaded 13.2 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/Mus.musculus_1.1.2.tar.gz'
+Content type 'application/x-gzip' length 1518 bytes
+opened URL
+==================================================
+downloaded 1518 bytes
+
+* installing *source* package ‘GenomicFeatures’ ...
+** R
+** inst
+** preparing package for lazy loading
+Error : object ‘sqliteQuickSQL’ is not exported by 'namespace:RSQLite'
+ERROR: lazy loading failed for package ‘GenomicFeatures’
+* removing ‘/usr/local/lib/R/site-library/GenomicFeatures’
+* installing *source* package ‘GO.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'GO.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/GO.db’
+* installing *source* package ‘org.Mm.eg.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'org.Mm.eg.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/org.Mm.eg.db’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘OrganismDbi’
+* removing ‘/usr/local/lib/R/site-library/OrganismDbi’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘TxDb.Mmusculus.UCSC.mm10.knownGene’
+* removing ‘/usr/local/lib/R/site-library/TxDb.Mmusculus.UCSC.mm10.knownGene’
+ERROR: dependencies ‘OrganismDbi’, ‘GenomicFeatures’, ‘GO.db’, ‘org.Mm.eg.db’, ‘TxDb.Mmusculus.UCSC.mm10.knownGene’ are not available for package ‘Mus.musculus’
+* removing ‘/usr/local/lib/R/site-library/Mus.musculus’
+
+The downloaded source packages are in
+	‘/tmp/RtmpmIp9kD/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'limma'
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/limma_3.18.13.tar.gz'
+Content type 'application/x-gzip' length 1048134 bytes (1023 Kb)
+opened URL
+==================================================
+downloaded 1023 Kb
+
+* installing *source* package ‘limma’ ...
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c normexp.c -o normexp.o
+gcc -std=gnu99 -shared -o limma.so normexp.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/limma/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (limma)
+
+The downloaded source packages are in
+	‘/tmp/RtmpmIp9kD/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'edgeR'
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/edgeR_3.4.2.tar.gz'
+Content type 'application/x-gzip' length 1126311 bytes (1.1 Mb)
+opened URL
+==================================================
+downloaded 1.1 Mb
+
+* installing *source* package ‘edgeR’ ...
+** libs
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_exact_test_by_deviance.cpp -o R_exact_test_by_deviance.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_loess_by_col.cpp -o R_loess_by_col.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_cr_adjust.cpp -o R_cr_adjust.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_levenberg.cpp -o R_levenberg.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_maximize_interpolant.cpp -o R_maximize_interpolant.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_one_group.cpp -o R_one_group.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_simple_good_turing.cpp -o R_simple_good_turing.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/adj_coxreid.cpp -o core/adj_coxreid.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/glm_levenberg.cpp -o core/glm_levenberg.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/glm_one_group.cpp -o core/glm_one_group.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/interpolator.cpp -o core/interpolator.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/fmm_spline.c -o core/fmm_spline.o
+g++ -shared -o edgeR.so R_exact_test_by_deviance.o R_loess_by_col.o R_cr_adjust.o R_levenberg.o R_maximize_interpolant.o R_one_group.o R_simple_good_turing.o core/adj_coxreid.o core/glm_levenberg.o core/glm_one_group.o core/interpolator.o core/fmm_spline.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/edgeR/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (edgeR)
+
+The downloaded source packages are in
+	‘/tmp/RtmpmIp9kD/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+There were 21 warnings (use warnings() to see them)
+> 
+ 
+-e >>>>> end of r_prep ...
+
+-e >>>>> start python_prep ...
+ 
+Requirement already satisfied (use --upgrade to upgrade): python-dateutil in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in /usr/lib/python2.7/dist-packages (from python-dateutil)
+Requirement already satisfied (use --upgrade to upgrade): bioblend in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): requests>=1.1.0 in /usr/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): poster in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): boto>=2.9.7 in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): pyyaml in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): pandas in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): python-dateutil in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7.0 in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in /usr/lib/python2.7/dist-packages (from python-dateutil->pandas)
+Requirement already satisfied (use --upgrade to upgrade): grequests in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): gevent in /usr/local/lib/python2.7/dist-packages (from grequests)
+Requirement already satisfied (use --upgrade to upgrade): requests>=1.0.0 in /usr/lib/python2.7/dist-packages (from grequests)
+Requirement already satisfied (use --upgrade to upgrade): greenlet in /usr/local/lib/python2.7/dist-packages (from gevent->grequests)
+Requirement already satisfied (use --upgrade to upgrade): GitPython in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): gitdb>=0.6.4 in /usr/local/lib/python2.7/dist-packages (from GitPython)
+Requirement already satisfied (use --upgrade to upgrade): smmap>=0.8.5 in /usr/local/lib/python2.7/dist-packages (from gitdb>=0.6.4->GitPython)
+Requirement already satisfied (use --upgrade to upgrade): pip-tools in /usr/local/lib/python2.7/dist-packages
+No update information found for apt-xapian-index
+chardet==2.3.0 is available (you have 2.0.1)
+python-apt==0.7.8 is available (you have =0.9.3.5ubuntu1)
+python-debian==0.1.23 is available (you have =0.1.21-nmu2ubuntu2)
+requests==2.5.3 is available (you have 2.2.1)
+six==1.9.0 is available (you have 1.5.2)
+ssh-import-id==4.1 is available (you have 3.21)
+urllib3==1.10.2 is available (you have 1.7.1)
+ 
+-e >>>>> end of python_prep ...
+
+-e >>>>> start samtools_prep ...
+ 
+-e samtools already downloaded.
+-e samtools libbam.a already copied.
+-e samtools bam-dir already exists.
+-e samtools PATH already setting.
+ 
+-e >>>>> end of samtools_prep ...
+
+-e >>>>> start sailfish_prep ...
+ 
+-e sailfish already downloaded.
+-e sailfish PATH already setting.
+-e sailfish-lib in LD_LIBRARY_PATH already setting.
+ 
+-e >>>>> end of sailfish_prep ...
+
+-e >>>>> start setting_galaxy ...
+ 
+ 
+-e >>>>> end of setting_galaxy...
+
+Stopping galaxy... done.
+Starting galaxy... 
+...done.

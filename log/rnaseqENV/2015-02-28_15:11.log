@@ -1,0 +1,831 @@
+-e >>>>> start r_prep ...
+ 
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-base is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-base-core is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-base-dev is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-recommended is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-mathlib is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-boot is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-class is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-cluster is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-codetools is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-foreign is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  r-cran-chron r-cran-formula r-cran-latticeextra r-cran-rcolorbrewer
+The following NEW packages will be installed:
+  r-cran-chron r-cran-formula r-cran-hmisc r-cran-latticeextra
+  r-cran-rcolorbrewer
+0 upgraded, 5 newly installed, 0 to remove and 5 not upgraded.
+Need to get 3,855 kB of archives.
+After this operation, 4,456 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-chron amd64 2.3-44-1 [95.9 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-formula all 1.1-1-1 [158 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-rcolorbrewer all 1.0-5-2 [25.3 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-latticeextra amd64 0.6-26-1 [2,065 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-hmisc amd64 3.14-0-1 [1,511 kB]
+Fetched 3,855 kB in 35s (108 kB/s)
+Selecting previously unselected package r-cran-chron.
+(Reading database ... 113825 files and directories currently installed.)
+Preparing to unpack .../r-cran-chron_2.3-44-1_amd64.deb ...
+Unpacking r-cran-chron (2.3-44-1) ...
+Selecting previously unselected package r-cran-formula.
+Preparing to unpack .../r-cran-formula_1.1-1-1_all.deb ...
+Unpacking r-cran-formula (1.1-1-1) ...
+Selecting previously unselected package r-cran-rcolorbrewer.
+Preparing to unpack .../r-cran-rcolorbrewer_1.0-5-2_all.deb ...
+Unpacking r-cran-rcolorbrewer (1.0-5-2) ...
+Selecting previously unselected package r-cran-latticeextra.
+Preparing to unpack .../r-cran-latticeextra_0.6-26-1_amd64.deb ...
+Unpacking r-cran-latticeextra (0.6-26-1) ...
+Selecting previously unselected package r-cran-hmisc.
+Preparing to unpack .../r-cran-hmisc_3.14-0-1_amd64.deb ...
+Unpacking r-cran-hmisc (3.14-0-1) ...
+Setting up r-cran-chron (2.3-44-1) ...
+Setting up r-cran-formula (1.1-1-1) ...
+Setting up r-cran-rcolorbrewer (1.0-5-2) ...
+Setting up r-cran-latticeextra (0.6-26-1) ...
+Setting up r-cran-hmisc (3.14-0-1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-kernsmooth is already the newest version.
+r-cran-kernsmooth set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-lattice is already the newest version.
+r-cran-lattice set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-mass is already the newest version.
+r-cran-mass set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-matrix is already the newest version.
+r-cran-matrix set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-mgcv is already the newest version.
+r-cran-mgcv set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-nlme is already the newest version.
+r-cran-nlme set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-nnet is already the newest version.
+r-cran-nnet set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libglu1-mesa libtk8.6 r-cran-abind r-cran-car r-cran-colorspace
+  r-cran-effects r-cran-lmtest r-cran-multcomp r-cran-mvtnorm r-cran-relimp
+  r-cran-rgl r-cran-sandwich r-cran-sm r-cran-strucchange r-cran-tcltk2
+  r-cran-th.data r-cran-zoo tcl tcl8.6 tk tk-table tk8.6
+Suggested packages:
+  r-cran-rodbc tcl-tclreadline
+The following NEW packages will be installed:
+  libglu1-mesa libtk8.6 r-cran-abind r-cran-car r-cran-colorspace
+  r-cran-effects r-cran-lmtest r-cran-multcomp r-cran-mvtnorm r-cran-rcmdr
+  r-cran-relimp r-cran-rgl r-cran-sandwich r-cran-sm r-cran-strucchange
+  r-cran-tcltk2 r-cran-th.data r-cran-zoo tcl tcl8.6 tk tk-table tk8.6
+0 upgraded, 23 newly installed, 0 to remove and 5 not upgraded.
+Need to get 16.5 MB of archives.
+After this operation, 27.8 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty/main libtk8.6 amd64 8.6.1-3ubuntu2 [689 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ trusty/main libglu1-mesa amd64 9.0.0-2 [195 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-abind all 1.4-0-2 [35.2 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-car all 2.0-19-1 [1,334 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-colorspace amd64 1.2-2-1 [364 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-effects all 2.3.0-1 [221 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-zoo amd64 1.7-10-1 [876 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-lmtest amd64 0.9.33-1 [263 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-mvtnorm amd64 0.9-9997-1 [176 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-sandwich all 2.3-0-1 [500 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-th.data amd64 1.0-3-1 [4,182 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-multcomp all 1.3-1-1 [580 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-relimp all 1.0-3-2 [43.5 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-rgl amd64 0.93.996-1 [1,450 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-sm amd64 2.2-5.4-1 [459 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-strucchange all 1.5-0-1 [787 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu/ trusty/main tk8.6 amd64 8.6.1-3ubuntu2 [12.1 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu/ trusty/main tcl8.6 amd64 8.6.1-4ubuntu1 [14.2 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu/ trusty/main tcl amd64 8.6.0+6ubuntu3 [4,900 B]
+Get:20 http://us.archive.ubuntu.com/ubuntu/ trusty/main tk amd64 8.6.0+6ubuntu3 [3,192 B]
+Get:21 http://us.archive.ubuntu.com/ubuntu/ trusty/universe tk-table amd64 2.10-1 [111 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-tcltk2 all 1.2-9-1 [674 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-rcmdr amd64 2.0-3-1 [3,565 kB]
+Fetched 16.5 MB in 4min 20s (63.5 kB/s)
+Selecting previously unselected package libtk8.6:amd64.
+(Reading database ... 113989 files and directories currently installed.)
+Preparing to unpack .../libtk8.6_8.6.1-3ubuntu2_amd64.deb ...
+Unpacking libtk8.6:amd64 (8.6.1-3ubuntu2) ...
+Selecting previously unselected package libglu1-mesa:amd64.
+Preparing to unpack .../libglu1-mesa_9.0.0-2_amd64.deb ...
+Unpacking libglu1-mesa:amd64 (9.0.0-2) ...
+Selecting previously unselected package r-cran-abind.
+Preparing to unpack .../r-cran-abind_1.4-0-2_all.deb ...
+Unpacking r-cran-abind (1.4-0-2) ...
+Selecting previously unselected package r-cran-car.
+Preparing to unpack .../r-cran-car_2.0-19-1_all.deb ...
+Unpacking r-cran-car (2.0-19-1) ...
+Selecting previously unselected package r-cran-colorspace.
+Preparing to unpack .../r-cran-colorspace_1.2-2-1_amd64.deb ...
+Unpacking r-cran-colorspace (1.2-2-1) ...
+Selecting previously unselected package r-cran-effects.
+Preparing to unpack .../r-cran-effects_2.3.0-1_all.deb ...
+Unpacking r-cran-effects (2.3.0-1) ...
+Selecting previously unselected package r-cran-zoo.
+Preparing to unpack .../r-cran-zoo_1.7-10-1_amd64.deb ...
+Unpacking r-cran-zoo (1.7-10-1) ...
+Selecting previously unselected package r-cran-lmtest.
+Preparing to unpack .../r-cran-lmtest_0.9.33-1_amd64.deb ...
+Unpacking r-cran-lmtest (0.9.33-1) ...
+Selecting previously unselected package r-cran-mvtnorm.
+Preparing to unpack .../r-cran-mvtnorm_0.9-9997-1_amd64.deb ...
+Unpacking r-cran-mvtnorm (0.9-9997-1) ...
+Selecting previously unselected package r-cran-sandwich.
+Preparing to unpack .../r-cran-sandwich_2.3-0-1_all.deb ...
+Unpacking r-cran-sandwich (2.3-0-1) ...
+Selecting previously unselected package r-cran-th.data.
+Preparing to unpack .../r-cran-th.data_1.0-3-1_amd64.deb ...
+Unpacking r-cran-th.data (1.0-3-1) ...
+Selecting previously unselected package r-cran-multcomp.
+Preparing to unpack .../r-cran-multcomp_1.3-1-1_all.deb ...
+Unpacking r-cran-multcomp (1.3-1-1) ...
+Selecting previously unselected package r-cran-relimp.
+Preparing to unpack .../r-cran-relimp_1.0-3-2_all.deb ...
+Unpacking r-cran-relimp (1.0-3-2) ...
+Selecting previously unselected package r-cran-rgl.
+Preparing to unpack .../r-cran-rgl_0.93.996-1_amd64.deb ...
+Unpacking r-cran-rgl (0.93.996-1) ...
+Selecting previously unselected package r-cran-sm.
+Preparing to unpack .../r-cran-sm_2.2-5.4-1_amd64.deb ...
+Unpacking r-cran-sm (2.2-5.4-1) ...
+Selecting previously unselected package r-cran-strucchange.
+Preparing to unpack .../r-cran-strucchange_1.5-0-1_all.deb ...
+Unpacking r-cran-strucchange (1.5-0-1) ...
+Selecting previously unselected package tk8.6.
+Preparing to unpack .../tk8.6_8.6.1-3ubuntu2_amd64.deb ...
+Unpacking tk8.6 (8.6.1-3ubuntu2) ...
+Selecting previously unselected package tcl8.6.
+Preparing to unpack .../tcl8.6_8.6.1-4ubuntu1_amd64.deb ...
+Unpacking tcl8.6 (8.6.1-4ubuntu1) ...
+Selecting previously unselected package tcl.
+Preparing to unpack .../tcl_8.6.0+6ubuntu3_amd64.deb ...
+Unpacking tcl (8.6.0+6ubuntu3) ...
+Selecting previously unselected package tk.
+Preparing to unpack .../tk_8.6.0+6ubuntu3_amd64.deb ...
+Unpacking tk (8.6.0+6ubuntu3) ...
+Selecting previously unselected package tk-table.
+Preparing to unpack .../tk-table_2.10-1_amd64.deb ...
+Unpacking tk-table (2.10-1) ...
+Selecting previously unselected package r-cran-tcltk2.
+Preparing to unpack .../r-cran-tcltk2_1.2-9-1_all.deb ...
+Unpacking r-cran-tcltk2 (1.2-9-1) ...
+Selecting previously unselected package r-cran-rcmdr.
+Preparing to unpack .../r-cran-rcmdr_2.0-3-1_amd64.deb ...
+Unpacking r-cran-rcmdr (2.0-3-1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for mime-support (3.54ubuntu1.1) ...
+Setting up libtk8.6:amd64 (8.6.1-3ubuntu2) ...
+Setting up libglu1-mesa:amd64 (9.0.0-2) ...
+Setting up r-cran-abind (1.4-0-2) ...
+Setting up r-cran-car (2.0-19-1) ...
+Setting up r-cran-colorspace (1.2-2-1) ...
+Setting up r-cran-effects (2.3.0-1) ...
+Setting up r-cran-zoo (1.7-10-1) ...
+Setting up r-cran-lmtest (0.9.33-1) ...
+Setting up r-cran-mvtnorm (0.9-9997-1) ...
+Setting up r-cran-sandwich (2.3-0-1) ...
+Setting up r-cran-th.data (1.0-3-1) ...
+Setting up r-cran-multcomp (1.3-1-1) ...
+Setting up r-cran-relimp (1.0-3-2) ...
+Setting up r-cran-rgl (0.93.996-1) ...
+Setting up r-cran-sm (2.2-5.4-1) ...
+Setting up r-cran-strucchange (1.5-0-1) ...
+Setting up tk8.6 (8.6.1-3ubuntu2) ...
+Setting up tcl8.6 (8.6.1-4ubuntu1) ...
+Setting up tcl (8.6.0+6ubuntu3) ...
+Setting up tk (8.6.0+6ubuntu3) ...
+Setting up tk-table (2.10-1) ...
+Setting up r-cran-tcltk2 (1.2-9-1) ...
+Setting up r-cran-rcmdr (2.0-3-1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-rpart is already the newest version.
+r-cran-rpart set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-spatial is already the newest version.
+r-cran-spatial set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-survival is already the newest version.
+r-cran-survival set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+r-cran-mass is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libltdl7 libodbc1
+Suggested packages:
+  libmyodbc odbc-postgresql tdsodbc unixodbc-bin
+The following NEW packages will be installed:
+  libltdl7 libodbc1 r-cran-rodbc
+0 upgraded, 3 newly installed, 0 to remove and 5 not upgraded.
+Need to get 1,004 kB of archives.
+After this operation, 2,074 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty/main libltdl7 amd64 2.4.2-1.7ubuntu1 [35.0 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu/ trusty/main libodbc1 amd64 2.2.14p2-5ubuntu5 [175 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu/ trusty/universe r-cran-rodbc amd64 1.3-10-1 [793 kB]
+Fetched 1,004 kB in 31s (32.1 kB/s)
+Selecting previously unselected package libltdl7:amd64.
+(Reading database ... 115614 files and directories currently installed.)
+Preparing to unpack .../libltdl7_2.4.2-1.7ubuntu1_amd64.deb ...
+Unpacking libltdl7:amd64 (2.4.2-1.7ubuntu1) ...
+Selecting previously unselected package libodbc1:amd64.
+Preparing to unpack .../libodbc1_2.2.14p2-5ubuntu5_amd64.deb ...
+Unpacking libodbc1:amd64 (2.2.14p2-5ubuntu5) ...
+Selecting previously unselected package r-cran-rodbc.
+Preparing to unpack .../r-cran-rodbc_1.3-10-1_amd64.deb ...
+Unpacking r-cran-rodbc (1.3-10-1) ...
+Setting up libltdl7:amd64 (2.4.2-1.7ubuntu1) ...
+Setting up libodbc1:amd64 (2.2.14p2-5ubuntu5) ...
+Setting up r-cran-rodbc (1.3-10-1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.6) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  r-cran-getopt
+The following NEW packages will be installed:
+  littler
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 32.2 kB of archives.
+After this operation, 119 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty/universe littler amd64 0.1.5-1 [32.2 kB]
+Fetched 32.2 kB in 6s (4,777 B/s)
+Selecting previously unselected package littler.
+(Reading database ... 115686 files and directories currently installed.)
+Preparing to unpack .../littler_0.1.5-1_amd64.deb ...
+Unpacking littler (0.1.5-1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up littler (0.1.5-1) ...
+
+R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> is.installed <- function(mypkg){
++     is.element(mypkg, installed.packages()[,1])
++ }
+> 
+> if (!is.installed("Mus.musculus")){
++ 	
++     install.packages('lazyeval', repos="http://cran.rstudio.com/")
++     install.packages('dplyr', repos="http://cran.rstudio.com/")
++ 	install.packages('plyr', repos="http://cran.rstudio.com/")
++ 	install.packages('tidyr', repos="http://cran.rstudio.com/")
++ 	install.packages('stringr', repos="http://cran.rstudio.com/")
++ 
++ 	source("http://bioconductor.org/biocLite.R")
++     biocLite("BiocUpgrade")
++     biocLite("ReportingTools")
++ 	biocLite("Mus.musculus")
++ 	biocLite("limma")
++ 	biocLite("edgeR")
++ }
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Warning: dependency ‘lazyeval’ is not available
+trying URL 'http://cran.rstudio.com/src/contrib/dplyr_0.4.1.tar.gz'
+Content type 'application/x-gzip' length 891010 bytes (870 Kb)
+opened URL
+==================================================
+downloaded 870 Kb
+
+ERROR: dependency ‘lazyeval’ is not available for package ‘dplyr’
+* removing ‘/usr/local/lib/R/site-library/dplyr’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp133RoY/downloaded_packages’
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'http://cran.rstudio.com/src/contrib/plyr_1.8.1.tar.gz'
+Content type 'application/x-gzip' length 393233 bytes (384 Kb)
+opened URL
+==================================================
+downloaded 384 Kb
+
+* installing *source* package ‘plyr’ ...
+** package ‘plyr’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c RcppExports.cpp -o RcppExports.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c loop-apply.cpp -o loop-apply.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c split-numeric.cpp -o split-numeric.o
+g++ -shared -o plyr.so RcppExports.o loop-apply.o split-numeric.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/plyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (plyr)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp133RoY/downloaded_packages’
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'http://cran.rstudio.com/src/contrib/stringr_0.6.2.tar.gz'
+Content type 'application/x-gzip' length 20636 bytes (20 Kb)
+opened URL
+==================================================
+downloaded 20 Kb
+
+* installing *source* package ‘stringr’ ...
+** package ‘stringr’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (stringr)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp133RoY/downloaded_packages’
+Bioconductor version 2.13 (BiocInstaller 1.12.1), ?biocLite for help
+A newer version of Bioconductor is available after installing a new version of
+  R, ?BiocUpgrade for help
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Old packages: 'car', 'chron', 'colorspace', 'effects', 'Formula', 'Hmisc',
+  'multcomp', 'mvtnorm', 'Rcmdr', 'RColorBrewer', 'relimp', 'rgl', 'RODBC',
+  'sandwich', 'tcltk2', 'TH.data', 'zoo', 'boot', 'class', 'cluster',
+  'codetools', 'foreign', 'KernSmooth', 'lattice', 'Matrix', 'mgcv', 'nlme',
+  'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'ReportingTools'
+also installing the dependencies ‘org.Hs.eg.db’, ‘GO.db’, ‘AnnotationForge’, ‘biovizBase’, ‘GenomicFeatures’, ‘VariantAnnotation’, ‘Category’, ‘GOstats’, ‘PFAM.db’, ‘ggbio’
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/org.Hs.eg.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 55283579 bytes (52.7 Mb)
+opened URL
+=================================================
+downloaded 52.7 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/GO.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 26094175 bytes (24.9 Mb)
+opened URL
+==================================================
+downloaded 24.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/AnnotationForge_1.4.4.tar.gz'
+Content type 'application/x-gzip' length 3721376 bytes (3.5 Mb)
+opened URL
+==================================================
+downloaded 3.5 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/biovizBase_1.10.8.tar.gz'
+Content type 'application/x-gzip' length 1035608 bytes (1011 Kb)
+opened URL
+==================================================
+downloaded 1011 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GenomicFeatures_1.14.5.tar.gz'
+Content type 'application/x-gzip' length 814511 bytes (795 Kb)
+opened URL
+==================================================
+downloaded 795 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/VariantAnnotation_1.8.13.tar.gz'
+Content type 'application/x-gzip' length 1280329 bytes (1.2 Mb)
+opened URL
+==================================================
+downloaded 1.2 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/Category_2.28.0.tar.gz'
+Content type 'application/x-gzip' length 598049 bytes (584 Kb)
+opened URL
+==================================================
+downloaded 584 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GOstats_2.28.0.tar.gz'
+Content type 'application/x-gzip' length 2828202 bytes (2.7 Mb)
+opened URL
+==================================================
+downloaded 2.7 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/PFAM.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 3762553 bytes (3.6 Mb)
+opened URL
+==================================================
+downloaded 3.6 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/ggbio_1.10.16.tar.gz'
+Content type 'application/x-gzip' length 1941249 bytes (1.9 Mb)
+opened URL
+==================================================
+downloaded 1.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/ReportingTools_2.2.0.tar.gz'
+Content type 'application/x-gzip' length 2514478 bytes (2.4 Mb)
+opened URL
+==================================================
+downloaded 2.4 Mb
+
+* installing *source* package ‘org.Hs.eg.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'org.Hs.eg.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/org.Hs.eg.db’
+* installing *source* package ‘GO.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'GO.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/GO.db’
+* installing *source* package ‘GenomicFeatures’ ...
+** R
+** inst
+** preparing package for lazy loading
+Error : object ‘sqliteQuickSQL’ is not exported by 'namespace:RSQLite'
+ERROR: lazy loading failed for package ‘GenomicFeatures’
+* removing ‘/usr/local/lib/R/site-library/GenomicFeatures’
+* installing *source* package ‘PFAM.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'PFAM.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/PFAM.db’
+ERROR: dependency ‘org.Hs.eg.db’ is not available for package ‘AnnotationForge’
+* removing ‘/usr/local/lib/R/site-library/AnnotationForge’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘biovizBase’
+* removing ‘/usr/local/lib/R/site-library/biovizBase’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘VariantAnnotation’
+* removing ‘/usr/local/lib/R/site-library/VariantAnnotation’
+ERROR: dependency ‘GO.db’ is not available for package ‘Category’
+* removing ‘/usr/local/lib/R/site-library/Category’
+ERROR: dependencies ‘Category’, ‘GO.db’, ‘AnnotationForge’ are not available for package ‘GOstats’
+* removing ‘/usr/local/lib/R/site-library/GOstats’
+ERROR: dependencies ‘biovizBase’, ‘GenomicFeatures’, ‘VariantAnnotation’ are not available for package ‘ggbio’
+* removing ‘/usr/local/lib/R/site-library/ggbio’
+ERROR: dependencies ‘Category’, ‘GOstats’, ‘PFAM.db’, ‘ggbio’ are not available for package ‘ReportingTools’
+* removing ‘/usr/local/lib/R/site-library/ReportingTools’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp133RoY/downloaded_packages’
+Old packages: 'car', 'chron', 'colorspace', 'effects', 'Formula', 'Hmisc',
+  'multcomp', 'mvtnorm', 'Rcmdr', 'RColorBrewer', 'relimp', 'rgl', 'RODBC',
+  'sandwich', 'tcltk2', 'TH.data', 'zoo', 'boot', 'class', 'cluster',
+  'codetools', 'foreign', 'KernSmooth', 'lattice', 'Matrix', 'mgcv', 'nlme',
+  'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'Mus.musculus'
+also installing the dependencies ‘OrganismDbi’, ‘GenomicFeatures’, ‘GO.db’, ‘org.Mm.eg.db’, ‘TxDb.Mmusculus.UCSC.mm10.knownGene’
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/OrganismDbi_1.4.0.tar.gz'
+Content type 'application/x-gzip' length 159819 bytes (156 Kb)
+opened URL
+==================================================
+downloaded 156 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GenomicFeatures_1.14.5.tar.gz'
+Content type 'application/x-gzip' length 814511 bytes (795 Kb)
+opened URL
+==================================================
+downloaded 795 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/GO.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 26094175 bytes (24.9 Mb)
+opened URL
+==================================================
+downloaded 24.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/org.Mm.eg.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 50728674 bytes (48.4 Mb)
+opened URL
+==================================================
+downloaded 48.4 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/TxDb.Mmusculus.UCSC.mm10.knownGene_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 13807340 bytes (13.2 Mb)
+opened URL
+==================================================
+downloaded 13.2 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/Mus.musculus_1.1.2.tar.gz'
+Content type 'application/x-gzip' length 1518 bytes
+opened URL
+==================================================
+downloaded 1518 bytes
+
+* installing *source* package ‘GenomicFeatures’ ...
+** R
+** inst
+** preparing package for lazy loading
+Error : object ‘sqliteQuickSQL’ is not exported by 'namespace:RSQLite'
+ERROR: lazy loading failed for package ‘GenomicFeatures’
+* removing ‘/usr/local/lib/R/site-library/GenomicFeatures’
+* installing *source* package ‘GO.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'GO.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/GO.db’
+* installing *source* package ‘org.Mm.eg.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'org.Mm.eg.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/org.Mm.eg.db’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘OrganismDbi’
+* removing ‘/usr/local/lib/R/site-library/OrganismDbi’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘TxDb.Mmusculus.UCSC.mm10.knownGene’
+* removing ‘/usr/local/lib/R/site-library/TxDb.Mmusculus.UCSC.mm10.knownGene’
+ERROR: dependencies ‘OrganismDbi’, ‘GenomicFeatures’, ‘GO.db’, ‘org.Mm.eg.db’, ‘TxDb.Mmusculus.UCSC.mm10.knownGene’ are not available for package ‘Mus.musculus’
+* removing ‘/usr/local/lib/R/site-library/Mus.musculus’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp133RoY/downloaded_packages’
+Old packages: 'car', 'chron', 'colorspace', 'effects', 'Formula', 'Hmisc',
+  'multcomp', 'mvtnorm', 'Rcmdr', 'RColorBrewer', 'relimp', 'rgl', 'RODBC',
+  'sandwich', 'tcltk2', 'TH.data', 'zoo', 'boot', 'class', 'cluster',
+  'codetools', 'foreign', 'KernSmooth', 'lattice', 'Matrix', 'mgcv', 'nlme',
+  'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'limma'
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/limma_3.18.13.tar.gz'
+Content type 'application/x-gzip' length 1048134 bytes (1023 Kb)
+opened URL
+==================================================
+downloaded 1023 Kb
+
+* installing *source* package ‘limma’ ...
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c normexp.c -o normexp.o
+gcc -std=gnu99 -shared -o limma.so normexp.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/limma/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (limma)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp133RoY/downloaded_packages’
+Old packages: 'car', 'chron', 'colorspace', 'effects', 'Formula', 'Hmisc',
+  'multcomp', 'mvtnorm', 'Rcmdr', 'RColorBrewer', 'relimp', 'rgl', 'RODBC',
+  'sandwich', 'tcltk2', 'TH.data', 'zoo', 'boot', 'class', 'cluster',
+  'codetools', 'foreign', 'KernSmooth', 'lattice', 'Matrix', 'mgcv', 'nlme',
+  'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'edgeR'
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/edgeR_3.4.2.tar.gz'
+Content type 'application/x-gzip' length 1126311 bytes (1.1 Mb)
+opened URL
+==================================================
+downloaded 1.1 Mb
+
+* installing *source* package ‘edgeR’ ...
+** libs
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_exact_test_by_deviance.cpp -o R_exact_test_by_deviance.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_loess_by_col.cpp -o R_loess_by_col.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_cr_adjust.cpp -o R_cr_adjust.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_levenberg.cpp -o R_levenberg.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_maximize_interpolant.cpp -o R_maximize_interpolant.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_one_group.cpp -o R_one_group.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_simple_good_turing.cpp -o R_simple_good_turing.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/adj_coxreid.cpp -o core/adj_coxreid.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/glm_levenberg.cpp -o core/glm_levenberg.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/glm_one_group.cpp -o core/glm_one_group.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/interpolator.cpp -o core/interpolator.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/fmm_spline.c -o core/fmm_spline.o
+g++ -shared -o edgeR.so R_exact_test_by_deviance.o R_loess_by_col.o R_cr_adjust.o R_levenberg.o R_maximize_interpolant.o R_one_group.o R_simple_good_turing.o core/adj_coxreid.o core/glm_levenberg.o core/glm_one_group.o core/interpolator.o core/fmm_spline.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/edgeR/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (edgeR)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp133RoY/downloaded_packages’
+Old packages: 'car', 'chron', 'colorspace', 'effects', 'Formula', 'Hmisc',
+  'multcomp', 'mvtnorm', 'Rcmdr', 'RColorBrewer', 'relimp', 'rgl', 'RODBC',
+  'sandwich', 'tcltk2', 'TH.data', 'zoo', 'boot', 'class', 'cluster',
+  'codetools', 'foreign', 'KernSmooth', 'lattice', 'Matrix', 'mgcv', 'nlme',
+  'nnet', 'rpart', 'spatial', 'survival'
+There were 21 warnings (use warnings() to see them)
+> 
+ 
+-e >>>>> end of r_prep ...
+
+-e >>>>> start python_prep ...
+ 
+Requirement already satisfied (use --upgrade to upgrade): python-dateutil in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in /usr/lib/python2.7/dist-packages (from python-dateutil)
+Requirement already satisfied (use --upgrade to upgrade): bioblend in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): requests>=1.1.0 in /usr/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): poster in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): boto>=2.9.7 in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): pyyaml in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): pandas in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): python-dateutil in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7.0 in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in /usr/lib/python2.7/dist-packages (from python-dateutil->pandas)
+Requirement already satisfied (use --upgrade to upgrade): grequests in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): gevent in /usr/local/lib/python2.7/dist-packages (from grequests)
+Requirement already satisfied (use --upgrade to upgrade): requests>=1.0.0 in /usr/lib/python2.7/dist-packages (from grequests)
+Requirement already satisfied (use --upgrade to upgrade): greenlet in /usr/local/lib/python2.7/dist-packages (from gevent->grequests)
+Requirement already satisfied (use --upgrade to upgrade): GitPython in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): gitdb>=0.6.4 in /usr/local/lib/python2.7/dist-packages (from GitPython)
+Requirement already satisfied (use --upgrade to upgrade): smmap>=0.8.5 in /usr/local/lib/python2.7/dist-packages (from gitdb>=0.6.4->GitPython)
+Requirement already satisfied (use --upgrade to upgrade): pip-tools in /usr/local/lib/python2.7/dist-packages
+No update information found for apt-xapian-index
+chardet==2.3.0 is available (you have 2.0.1)
+python-apt==0.7.8 is available (you have =0.9.3.5ubuntu1)
+python-debian==0.1.23 is available (you have =0.1.21-nmu2ubuntu2)
+requests==2.5.3 is available (you have 2.2.1)
+six==1.9.0 is available (you have 1.5.2)
+ssh-import-id==4.1 is available (you have 3.21)
+urllib3==1.10.2 is available (you have 1.7.1)
+ 
+-e >>>>> end of python_prep ...
+
+-e >>>>> start samtools_prep ...
+ 
+-e samtools already downloaded.
+-e samtools libbam.a already copied.
+-e samtools bam-dir already exists.
+-e samtools PATH already setting.
+ 
+-e >>>>> end of samtools_prep ...
+
+-e >>>>> start sailfish_prep ...
+ 
+-e sailfish already downloaded.
+-e sailfish PATH already setting.
+-e sailfish-lib in LD_LIBRARY_PATH already setting.
+ 
+-e >>>>> end of sailfish_prep ...
+
+-e >>>>> start setting_galaxy ...
+ 
+ 
+-e >>>>> end of setting_galaxy...
+
+Stopping galaxy... done.
+Starting galaxy... 
+...done.

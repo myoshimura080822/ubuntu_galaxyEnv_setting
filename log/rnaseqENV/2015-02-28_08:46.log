@@ -1,0 +1,495 @@
+-e >>>>> start r_prep ...
+ 
+
+R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> is.installed <- function(mypkg){
++     is.element(mypkg, installed.packages()[,1])
++ }
+> 
+> if (!is.installed("Mus.musculus")){
++ 	install.packages('dplyr', repos="http://cran.rstudio.com/")
++ 	install.packages('plyr', repos="http://cran.rstudio.com/")
++ 	install.packages('tidyr', repos="http://cran.rstudio.com/")
++ 	install.packages('stringr', repos="http://cran.rstudio.com/")
++ 
++ 	source("http://bioconductor.org/biocLite.R")
++ 	biocLite("Mus.musculus")
++ 	biocLite("limma")
++ 	biocLite("edgeR")
++ }
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Warning: dependency ‘lazyeval’ is not available
+trying URL 'http://cran.rstudio.com/src/contrib/dplyr_0.4.1.tar.gz'
+Content type 'application/x-gzip' length 891010 bytes (870 Kb)
+opened URL
+==================================================
+downloaded 870 Kb
+
+ERROR: dependency ‘lazyeval’ is not available for package ‘dplyr’
+* removing ‘/usr/local/lib/R/site-library/dplyr’
+
+The downloaded source packages are in
+	‘/tmp/RtmpoJevrI/downloaded_packages’
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'http://cran.rstudio.com/src/contrib/plyr_1.8.1.tar.gz'
+Content type 'application/x-gzip' length 393233 bytes (384 Kb)
+opened URL
+==================================================
+downloaded 384 Kb
+
+* installing *source* package ‘plyr’ ...
+** package ‘plyr’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c RcppExports.cpp -o RcppExports.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c loop-apply.cpp -o loop-apply.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c split-numeric.cpp -o split-numeric.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -shared -o plyr.so RcppExports.o loop-apply.o split-numeric.o -L/usr/lib/R/lib -lR
+/usr/bin/ld: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+installing to /usr/local/lib/R/site-library/plyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (plyr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpoJevrI/downloaded_packages’
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'http://cran.rstudio.com/src/contrib/stringr_0.6.2.tar.gz'
+Content type 'application/x-gzip' length 20636 bytes (20 Kb)
+opened URL
+==================================================
+downloaded 20 Kb
+
+* installing *source* package ‘stringr’ ...
+** package ‘stringr’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (stringr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpoJevrI/downloaded_packages’
+Bioconductor version 2.13 (BiocInstaller 1.12.1), ?biocLite for help
+A newer version of Bioconductor is available after installing a new version of
+  R, ?BiocUpgrade for help
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'Mus.musculus'
+also installing the dependencies ‘rtracklayer’, ‘biomaRt’, ‘OrganismDbi’, ‘GenomicFeatures’, ‘GO.db’, ‘org.Mm.eg.db’, ‘TxDb.Mmusculus.UCSC.mm10.knownGene’
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/rtracklayer_1.22.7.tar.gz'
+Content type 'application/x-gzip' length 1325759 bytes (1.3 Mb)
+opened URL
+==================================================
+downloaded 1.3 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/biomaRt_2.18.0.tar.gz'
+Content type 'application/x-gzip' length 255891 bytes (249 Kb)
+opened URL
+==================================================
+downloaded 249 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/OrganismDbi_1.4.0.tar.gz'
+Content type 'application/x-gzip' length 159819 bytes (156 Kb)
+opened URL
+==================================================
+downloaded 156 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GenomicFeatures_1.14.5.tar.gz'
+Content type 'application/x-gzip' length 814511 bytes (795 Kb)
+opened URL
+==================================================
+downloaded 795 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/GO.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 26094175 bytes (24.9 Mb)
+opened URL
+==================================================
+downloaded 24.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/org.Mm.eg.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 50728674 bytes (48.4 Mb)
+opened URL
+==================================================
+downloaded 48.4 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/TxDb.Mmusculus.UCSC.mm10.knownGene_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 13807340 bytes (13.2 Mb)
+opened URL
+==================================================
+downloaded 13.2 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/Mus.musculus_1.1.2.tar.gz'
+Content type 'application/x-gzip' length 1518 bytes
+opened URL
+==================================================
+downloaded 1518 bytes
+
+* installing *source* package ‘rtracklayer’ ...
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c IRanges_stubs.c -o IRanges_stubs.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c XVector_stubs.c -o XVector_stubs.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c R_init_rtracklayer.c -o R_init_rtracklayer.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c bigWig.c -o bigWig.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c chain_io.c -o chain_io.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+chain_io.c: In function ‘read_chain_file’:
+chain_io.c:119:14: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+         fgets(linebuf, LINEBUF_SIZE, stream); /* skip empty line */
+              ^
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c twoBit.c -o twoBit.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c handlers.c -o handlers.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c utils.c -o utils.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/bPlusTree.c -o ucsc/bPlusTree.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/bbiRead.c -o ucsc/bbiRead.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/bbiWrite.c -o ucsc/bbiWrite.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/bwgCreate.c -o ucsc/bwgCreate.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/bwgQuery.c -o ucsc/bwgQuery.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/cirTree.c -o ucsc/cirTree.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/common.c -o ucsc/common.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/dnaseq.c -o ucsc/dnaseq.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/dnautil.c -o ucsc/dnautil.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/errabort.c -o ucsc/errabort.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/hash.c -o ucsc/hash.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/linefile.c -o ucsc/linefile.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/localmem.c -o ucsc/localmem.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/sqlNum.c -o ucsc/sqlNum.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/zlibFace.c -o ucsc/zlibFace.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/dystring.c -o ucsc/dystring.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/hmmstats.c -o ucsc/hmmstats.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/obscure.c -o ucsc/obscure.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/pipeline.c -o ucsc/pipeline.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/rangeTree.c -o ucsc/rangeTree.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/rbTree.c -o ucsc/rbTree.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/memalloc.c -o ucsc/memalloc.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/dlist.c -o ucsc/dlist.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/udc.c -o ucsc/udc.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/net.c -o ucsc/net.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/bits.c -o ucsc/bits.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/twoBit.c -o ucsc/twoBit.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/_cheapcgi.c -o ucsc/_cheapcgi.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/internet.c -o ucsc/internet.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/https.c -o ucsc/https.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/base64.c -o ucsc/base64.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/verbose.c -o ucsc/verbose.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/os.c -o ucsc/os.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/wildcmp.c -o ucsc/wildcmp.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -D_FILE_OFFSET_BITS=64  -I"/usr/local/lib/R/site-library/IRanges/include" -I"/usr/local/lib/R/site-library/XVector/include"  -g -fpic  -O3 -pipe  -g  -c ucsc/_portimpl.c -o ucsc/_portimpl.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -shared -o rtracklayer.so IRanges_stubs.o XVector_stubs.o R_init_rtracklayer.o bigWig.o chain_io.o twoBit.o handlers.o utils.o ucsc/bPlusTree.o ucsc/bbiRead.o ucsc/bbiWrite.o ucsc/bwgCreate.o ucsc/bwgQuery.o ucsc/cirTree.o ucsc/common.o ucsc/dnaseq.o ucsc/dnautil.o ucsc/errabort.o ucsc/hash.o ucsc/linefile.o ucsc/localmem.o ucsc/sqlNum.o ucsc/zlibFace.o ucsc/dystring.o ucsc/hmmstats.o ucsc/obscure.o ucsc/pipeline.o ucsc/rangeTree.o ucsc/rbTree.o ucsc/memalloc.o ucsc/dlist.o ucsc/udc.o ucsc/net.o ucsc/bits.o ucsc/twoBit.o ucsc/_cheapcgi.o ucsc/internet.o ucsc/https.o ucsc/base64.o ucsc/verbose.o ucsc/os.o ucsc/wildcmp.o ucsc/_portimpl.o -lz -pthread -L/usr/lib/R/lib -lR
+/usr/bin/ld: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+installing to /usr/local/lib/R/site-library/rtracklayer/libs
+** R
+** data
+** demo
+** inst
+** preparing package for lazy loading
+Error : .onLoad failed in loadNamespace() for 'XML', details:
+  call: dyn.load(file, DLLpath = DLLpath, ...)
+  error: unable to load shared object '/usr/local/lib/R/site-library/XML/libs/XML.so':
+  /usr/lib/x86_64-linux-gnu/libxml2.so.2: symbol gzopen64, version ZLIB_1.2.3.3 not defined in file libz.so.1 with link time reference
+ERROR: lazy loading failed for package ‘rtracklayer’
+* removing ‘/usr/local/lib/R/site-library/rtracklayer’
+* installing *source* package ‘biomaRt’ ...
+** R
+** inst
+** preparing package for lazy loading
+Error : .onLoad failed in loadNamespace() for 'XML', details:
+  call: dyn.load(file, DLLpath = DLLpath, ...)
+  error: unable to load shared object '/usr/local/lib/R/site-library/XML/libs/XML.so':
+  /usr/lib/x86_64-linux-gnu/libxml2.so.2: symbol gzopen64, version ZLIB_1.2.3.3 not defined in file libz.so.1 with link time reference
+ERROR: lazy loading failed for package ‘biomaRt’
+* removing ‘/usr/local/lib/R/site-library/biomaRt’
+* installing *source* package ‘GO.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'GO.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/GO.db’
+* installing *source* package ‘org.Mm.eg.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'org.Mm.eg.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/org.Mm.eg.db’
+ERROR: dependencies ‘rtracklayer’, ‘biomaRt’ are not available for package ‘GenomicFeatures’
+* removing ‘/usr/local/lib/R/site-library/GenomicFeatures’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘OrganismDbi’
+* removing ‘/usr/local/lib/R/site-library/OrganismDbi’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘TxDb.Mmusculus.UCSC.mm10.knownGene’
+* removing ‘/usr/local/lib/R/site-library/TxDb.Mmusculus.UCSC.mm10.knownGene’
+ERROR: dependencies ‘OrganismDbi’, ‘GenomicFeatures’, ‘GO.db’, ‘org.Mm.eg.db’, ‘TxDb.Mmusculus.UCSC.mm10.knownGene’ are not available for package ‘Mus.musculus’
+* removing ‘/usr/local/lib/R/site-library/Mus.musculus’
+
+The downloaded source packages are in
+	‘/tmp/RtmpoJevrI/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'limma'
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/limma_3.18.13.tar.gz'
+Content type 'application/x-gzip' length 1048134 bytes (1023 Kb)
+opened URL
+==================================================
+downloaded 1023 Kb
+
+* installing *source* package ‘limma’ ...
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c normexp.c -o normexp.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -shared -o limma.so normexp.o -L/usr/lib/R/lib -lR
+/usr/bin/ld: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+installing to /usr/local/lib/R/site-library/limma/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (limma)
+
+The downloaded source packages are in
+	‘/tmp/RtmpoJevrI/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'edgeR'
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/edgeR_3.4.2.tar.gz'
+Content type 'application/x-gzip' length 1126311 bytes (1.1 Mb)
+opened URL
+==================================================
+downloaded 1.1 Mb
+
+* installing *source* package ‘edgeR’ ...
+** libs
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_exact_test_by_deviance.cpp -o R_exact_test_by_deviance.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_loess_by_col.cpp -o R_loess_by_col.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_cr_adjust.cpp -o R_cr_adjust.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_levenberg.cpp -o R_levenberg.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_maximize_interpolant.cpp -o R_maximize_interpolant.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_one_group.cpp -o R_one_group.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_simple_good_turing.cpp -o R_simple_good_turing.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/adj_coxreid.cpp -o core/adj_coxreid.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/glm_levenberg.cpp -o core/glm_levenberg.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/glm_one_group.cpp -o core/glm_one_group.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/interpolator.cpp -o core/interpolator.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/fmm_spline.c -o core/fmm_spline.o
+as: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+g++ -shared -o edgeR.so R_exact_test_by_deviance.o R_loess_by_col.o R_cr_adjust.o R_levenberg.o R_maximize_interpolant.o R_one_group.o R_simple_good_turing.o core/adj_coxreid.o core/glm_levenberg.o core/glm_one_group.o core/interpolator.o core/fmm_spline.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+/usr/bin/ld: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/lib/libbfd-2.24-system.so)
+installing to /usr/local/lib/R/site-library/edgeR/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (edgeR)
+
+The downloaded source packages are in
+	‘/tmp/RtmpoJevrI/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+Warning messages:
+1: In install.packages("dplyr", repos = "http://cran.rstudio.com/") :
+  installation of package ‘dplyr’ had non-zero exit status
+2: package ‘tidyr’ is not available (for R version 3.0.2) 
+3: In install.packages(pkgs = pkgs, lib = lib, repos = repos, ...) :
+  installation of package ‘rtracklayer’ had non-zero exit status
+4: In install.packages(pkgs = pkgs, lib = lib, repos = repos, ...) :
+  installation of package ‘biomaRt’ had non-zero exit status
+5: In install.packages(pkgs = pkgs, lib = lib, repos = repos, ...) :
+  installation of package ‘GO.db’ had non-zero exit status
+6: In install.packages(pkgs = pkgs, lib = lib, repos = repos, ...) :
+  installation of package ‘org.Mm.eg.db’ had non-zero exit status
+7: In install.packages(pkgs = pkgs, lib = lib, repos = repos, ...) :
+  installation of package ‘GenomicFeatures’ had non-zero exit status
+8: In install.packages(pkgs = pkgs, lib = lib, repos = repos, ...) :
+  installation of package ‘OrganismDbi’ had non-zero exit status
+9: In install.packages(pkgs = pkgs, lib = lib, repos = repos, ...) :
+  installation of package ‘TxDb.Mmusculus.UCSC.mm10.knownGene’ had non-zero exit status
+10: In install.packages(pkgs = pkgs, lib = lib, repos = repos, ...) :
+  installation of package ‘Mus.musculus’ had non-zero exit status
+> 
+ 
+-e >>>>> end of r_prep ...
+
+-e >>>>> start python_prep ...
+ 
+/usr/bin/python: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/bin/python)
+Requirement already satisfied (use --upgrade to upgrade): python-dateutil in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in /usr/lib/python2.7/dist-packages (from python-dateutil)
+/usr/bin/python: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/bin/python)
+Requirement already satisfied (use --upgrade to upgrade): bioblend in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): requests>=1.1.0 in /usr/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): poster in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): boto>=2.9.7 in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): pyyaml in /usr/local/lib/python2.7/dist-packages (from bioblend)
+/usr/bin/python: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/bin/python)
+Requirement already satisfied (use --upgrade to upgrade): pandas in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): python-dateutil in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7.0 in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in /usr/lib/python2.7/dist-packages (from python-dateutil->pandas)
+/usr/bin/python: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/bin/python)
+Requirement already satisfied (use --upgrade to upgrade): grequests in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): gevent in /usr/local/lib/python2.7/dist-packages (from grequests)
+Requirement already satisfied (use --upgrade to upgrade): requests>=1.0.0 in /usr/lib/python2.7/dist-packages (from grequests)
+Requirement already satisfied (use --upgrade to upgrade): greenlet in /usr/local/lib/python2.7/dist-packages (from gevent->grequests)
+/usr/bin/python: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/bin/python)
+Requirement already satisfied (use --upgrade to upgrade): GitPython in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): gitdb>=0.6.4 in /usr/local/lib/python2.7/dist-packages (from GitPython)
+Requirement already satisfied (use --upgrade to upgrade): smmap>=0.8.5 in /usr/local/lib/python2.7/dist-packages (from gitdb>=0.6.4->GitPython)
+/usr/bin/python: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/bin/python)
+Requirement already satisfied (use --upgrade to upgrade): pip-tools in /usr/local/lib/python2.7/dist-packages
+/usr/bin/python: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/bin/python)
+/usr/bin/python: /usr/local/src/Sailfish-0.6.3-Linux_x86-64/lib/libz.so.1: no version information available (required by /usr/bin/python)
+No update information found for apt-xapian-index
+chardet==2.3.0 is available (you have 2.0.1)
+python-apt==0.7.8 is available (you have =0.9.3.5ubuntu1)
+python-debian==0.1.23 is available (you have =0.1.21-nmu2ubuntu2)
+requests==2.5.3 is available (you have 2.2.1)
+six==1.9.0 is available (you have 1.5.2)
+ssh-import-id==4.1 is available (you have 3.21)
+urllib3==1.10.2 is available (you have 1.7.1)
+ 
+-e >>>>> end of python_prep ...
+
+-e >>>>> start samtools_prep ...
+ 
+-e samtools already downloaded.
+-e samtools libbam.a already copied.
+-e samtools bam-dir already exists.
+-e samtoolspath no
+ 
+-e >>>>> end of samtools_prep ...
+
+-e >>>>> start sailfish_prep ...
+ 
+-e sailfish already downloaded.
+-e sailfieh PATH no
+-e sailfish lib64 no
+-e sailfishlib no
+ 
+-e >>>>> end of sailfish_prep ...
+
+-e >>>>> start setting_galaxy ...
+ 
+ 
+-e >>>>> end of setting_galaxy...
+
+Stopping galaxy... done.
+Starting galaxy... 
+...done.

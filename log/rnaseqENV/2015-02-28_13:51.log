@@ -1,0 +1,1165 @@
+-e >>>>> start r_prep ...
+ 
+
+R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> is.installed <- function(mypkg){
++     is.element(mypkg, installed.packages()[,1])
++ }
+> 
+> if (!is.installed("Mus.musculus")){
++ 	install.packages('lazyeval', repos="http://cran.rstudio.com/")
++     install.packages('dplyr', repos="http://cran.rstudio.com/")
++ 	install.packages('plyr', repos="http://cran.rstudio.com/")
++ 	install.packages('tidyr', repos="http://cran.rstudio.com/")
++ 	install.packages('stringr', repos="http://cran.rstudio.com/")
++ 
++ 	source("http://bioconductor.org/biocLite.R")
++     biocLite("ReportingTools")
++ 	biocLite("Mus.musculus")
++ 	biocLite("limma")
++ 	biocLite("edgeR")
++ }
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Warning: dependency ‘lazyeval’ is not available
+trying URL 'http://cran.rstudio.com/src/contrib/dplyr_0.4.1.tar.gz'
+Content type 'application/x-gzip' length 891010 bytes (870 Kb)
+opened URL
+==================================================
+downloaded 870 Kb
+
+ERROR: dependency ‘lazyeval’ is not available for package ‘dplyr’
+* removing ‘/usr/local/lib/R/site-library/dplyr’
+
+The downloaded source packages are in
+	‘/tmp/RtmpWiwO3o/downloaded_packages’
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'http://cran.rstudio.com/src/contrib/plyr_1.8.1.tar.gz'
+Content type 'application/x-gzip' length 393233 bytes (384 Kb)
+opened URL
+==================================================
+downloaded 384 Kb
+
+* installing *source* package ‘plyr’ ...
+** package ‘plyr’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c RcppExports.cpp -o RcppExports.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c loop-apply.cpp -o loop-apply.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c split-numeric.cpp -o split-numeric.o
+g++ -shared -o plyr.so RcppExports.o loop-apply.o split-numeric.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/plyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (plyr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpWiwO3o/downloaded_packages’
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+trying URL 'http://cran.rstudio.com/src/contrib/stringr_0.6.2.tar.gz'
+Content type 'application/x-gzip' length 20636 bytes (20 Kb)
+opened URL
+==================================================
+downloaded 20 Kb
+
+* installing *source* package ‘stringr’ ...
+** package ‘stringr’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (stringr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpWiwO3o/downloaded_packages’
+Bioconductor version 2.13 (BiocInstaller 1.12.1), ?biocLite for help
+A newer version of Bioconductor is available after installing a new version of
+  R, ?BiocUpgrade for help
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'ReportingTools'
+also installing the dependencies ‘colorspace’, ‘mime’, ‘org.Hs.eg.db’, ‘dichromat’, ‘munsell’, ‘labeling’, ‘Formula’, ‘latticeExtra’, ‘acepack’, ‘evaluate’, ‘digest’, ‘formatR’, ‘highr’, ‘markdown’, ‘GO.db’, ‘genefilter’, ‘AnnotationForge’, ‘xtable’, ‘R.oo’, ‘R.methodsS3’, ‘gtable’, ‘reshape2’, ‘scales’, ‘proto’, ‘biovizBase’, ‘GenomicFeatures’, ‘gridExtra’, ‘VariantAnnotation’, ‘Hmisc’, ‘RcppArmadillo’, ‘locfit’, ‘RColorBrewer’, ‘knitr’, ‘hwriter’, ‘Category’, ‘GOstats’, ‘annotate’, ‘PFAM.db’, ‘GSEABase’, ‘R.utils’, ‘ggplot2’, ‘ggbio’, ‘DESeq2’
+
+trying URL 'http://cran.fhcrc.org/src/contrib/colorspace_1.2-4.tar.gz'
+Content type 'application/x-gzip' length 242791 bytes (237 Kb)
+opened URL
+==================================================
+downloaded 237 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/mime_0.2.tar.gz'
+Content type 'application/x-gzip' length 12016 bytes (11 Kb)
+opened URL
+==================================================
+downloaded 11 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/org.Hs.eg.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 55283579 bytes (52.7 Mb)
+opened URL
+=================================================
+downloaded 52.7 Mb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/dichromat_2.0-0.tar.gz'
+Content type 'application/x-gzip' length 84320 bytes (82 Kb)
+opened URL
+==================================================
+downloaded 82 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/munsell_0.4.2.tar.gz'
+Content type 'application/x-gzip' length 91026 bytes (88 Kb)
+opened URL
+==================================================
+downloaded 88 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/labeling_0.3.tar.gz'
+Content type 'application/x-gzip' length 10722 bytes (10 Kb)
+opened URL
+==================================================
+downloaded 10 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/Formula_1.2-0.tar.gz'
+Content type 'application/x-gzip' length 149177 bytes (145 Kb)
+opened URL
+==================================================
+downloaded 145 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/latticeExtra_0.6-26.tar.gz'
+Content type 'application/x-gzip' length 1295154 bytes (1.2 Mb)
+opened URL
+==================================================
+downloaded 1.2 Mb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/acepack_1.3-3.3.tar.gz'
+Content type 'application/x-gzip' length 33590 bytes (32 Kb)
+opened URL
+==================================================
+downloaded 32 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/evaluate_0.5.5.tar.gz'
+Content type 'application/x-gzip' length 17944 bytes (17 Kb)
+opened URL
+==================================================
+downloaded 17 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/digest_0.6.8.tar.gz'
+Content type 'application/x-gzip' length 97985 bytes (95 Kb)
+opened URL
+==================================================
+downloaded 95 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/formatR_1.0.tar.gz'
+Content type 'application/x-gzip' length 28265 bytes (27 Kb)
+opened URL
+==================================================
+downloaded 27 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/highr_0.4.tar.gz'
+Content type 'application/x-gzip' length 16741 bytes (16 Kb)
+opened URL
+==================================================
+downloaded 16 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/markdown_0.7.4.tar.gz'
+Content type 'application/x-gzip' length 77898 bytes (76 Kb)
+opened URL
+==================================================
+downloaded 76 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/GO.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 26094175 bytes (24.9 Mb)
+opened URL
+==================================================
+downloaded 24.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/genefilter_1.44.0.tar.gz'
+Content type 'application/x-gzip' length 1145312 bytes (1.1 Mb)
+opened URL
+==================================================
+downloaded 1.1 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/AnnotationForge_1.4.4.tar.gz'
+Content type 'application/x-gzip' length 3721376 bytes (3.5 Mb)
+opened URL
+==================================================
+downloaded 3.5 Mb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/xtable_1.7-4.tar.gz'
+Content type 'application/x-gzip' length 350204 bytes (341 Kb)
+opened URL
+==================================================
+downloaded 341 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/R.oo_1.19.0.tar.gz'
+Content type 'application/x-gzip' length 401147 bytes (391 Kb)
+opened URL
+==================================================
+downloaded 391 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/R.methodsS3_1.7.0.tar.gz'
+Content type 'application/x-gzip' length 25721 bytes (25 Kb)
+opened URL
+==================================================
+downloaded 25 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/gtable_0.1.2.tar.gz'
+Content type 'application/x-gzip' length 19667 bytes (19 Kb)
+opened URL
+==================================================
+downloaded 19 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/reshape2_1.4.1.tar.gz'
+Content type 'application/x-gzip' length 34693 bytes (33 Kb)
+opened URL
+==================================================
+downloaded 33 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/scales_0.2.4.tar.gz'
+Content type 'application/x-gzip' length 40093 bytes (39 Kb)
+opened URL
+==================================================
+downloaded 39 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/proto_0.3-10.tar.gz'
+Content type 'application/x-gzip' length 530758 bytes (518 Kb)
+opened URL
+==================================================
+downloaded 518 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/biovizBase_1.10.8.tar.gz'
+Content type 'application/x-gzip' length 1035608 bytes (1011 Kb)
+opened URL
+==================================================
+downloaded 1011 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GenomicFeatures_1.14.5.tar.gz'
+Content type 'application/x-gzip' length 814511 bytes (795 Kb)
+opened URL
+==================================================
+downloaded 795 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/gridExtra_0.9.1.tar.gz'
+Content type 'application/x-gzip' length 29183 bytes (28 Kb)
+opened URL
+==================================================
+downloaded 28 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/VariantAnnotation_1.8.13.tar.gz'
+Content type 'application/x-gzip' length 1280329 bytes (1.2 Mb)
+opened URL
+==================================================
+downloaded 1.2 Mb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/Hmisc_3.15-0.tar.gz'
+Content type 'application/x-gzip' length 619914 bytes (605 Kb)
+opened URL
+==================================================
+downloaded 605 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/RcppArmadillo_0.4.650.1.1.tar.gz'
+Content type 'application/x-gzip' length 942110 bytes (920 Kb)
+opened URL
+==================================================
+downloaded 920 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/locfit_1.5-9.1.tar.gz'
+Content type 'application/x-gzip' length 196560 bytes (191 Kb)
+opened URL
+==================================================
+downloaded 191 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/RColorBrewer_1.1-2.tar.gz'
+Content type 'application/x-gzip' length 11532 bytes (11 Kb)
+opened URL
+==================================================
+downloaded 11 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/knitr_1.9.tar.gz'
+Content type 'application/x-gzip' length 675078 bytes (659 Kb)
+opened URL
+==================================================
+downloaded 659 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/hwriter_1.3.2.tar.gz'
+Content type 'application/x-gzip' length 114012 bytes (111 Kb)
+opened URL
+==================================================
+downloaded 111 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/Category_2.28.0.tar.gz'
+Content type 'application/x-gzip' length 598049 bytes (584 Kb)
+opened URL
+==================================================
+downloaded 584 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GOstats_2.28.0.tar.gz'
+Content type 'application/x-gzip' length 2828202 bytes (2.7 Mb)
+opened URL
+==================================================
+downloaded 2.7 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/annotate_1.40.1.tar.gz'
+Content type 'application/x-gzip' length 1835494 bytes (1.8 Mb)
+opened URL
+==================================================
+downloaded 1.8 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/PFAM.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 3762553 bytes (3.6 Mb)
+opened URL
+==================================================
+downloaded 3.6 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GSEABase_1.24.0.tar.gz'
+Content type 'application/x-gzip' length 233828 bytes (228 Kb)
+opened URL
+==================================================
+downloaded 228 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/R.utils_1.34.0.tar.gz'
+Content type 'application/x-gzip' length 354260 bytes (345 Kb)
+opened URL
+==================================================
+downloaded 345 Kb
+
+trying URL 'http://cran.fhcrc.org/src/contrib/ggplot2_1.0.0.tar.gz'
+Content type 'application/x-gzip' length 2351447 bytes (2.2 Mb)
+opened URL
+==================================================
+downloaded 2.2 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/ggbio_1.10.16.tar.gz'
+Content type 'application/x-gzip' length 1941249 bytes (1.9 Mb)
+opened URL
+==================================================
+downloaded 1.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/DESeq2_1.2.10.tar.gz'
+Content type 'application/x-gzip' length 1399856 bytes (1.3 Mb)
+opened URL
+==================================================
+downloaded 1.3 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/ReportingTools_2.2.0.tar.gz'
+Content type 'application/x-gzip' length 2514478 bytes (2.4 Mb)
+opened URL
+==================================================
+downloaded 2.4 Mb
+
+* installing *source* package ‘colorspace’ ...
+** package ‘colorspace’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c colorspace.c -o colorspace.o
+gcc -std=gnu99 -shared -o colorspace.so colorspace.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/colorspace/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+Creating a generic function for ‘plot’ from package ‘graphics’ in package ‘colorspace’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (colorspace)
+* installing *source* package ‘mime’ ...
+** package ‘mime’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c rawmatch.c -o rawmatch.o
+gcc -std=gnu99 -shared -o mime.so rawmatch.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/mime/libs
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (mime)
+* installing *source* package ‘org.Hs.eg.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'org.Hs.eg.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/org.Hs.eg.db’
+* installing *source* package ‘dichromat’ ...
+** package ‘dichromat’ successfully unpacked and MD5 sums checked
+** R
+** data
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (dichromat)
+* installing *source* package ‘labeling’ ...
+** package ‘labeling’ successfully unpacked and MD5 sums checked
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (labeling)
+* installing *source* package ‘Formula’ ...
+** package ‘Formula’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (Formula)
+* installing *source* package ‘acepack’ ...
+** package ‘acepack’ successfully unpacked and MD5 sums checked
+** libs
+gfortran   -fpic  -O3 -pipe  -g  -c ace.f -o ace.o
+gfortran   -fpic  -O3 -pipe  -g  -c avas.f -o avas.o
+gfortran   -fpic  -O3 -pipe  -g  -c rlsmo.f -o rlsmo.o
+gcc -std=gnu99 -shared -o acepack.so ace.o avas.o rlsmo.o -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/acepack/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (acepack)
+* installing *source* package ‘evaluate’ ...
+** package ‘evaluate’ successfully unpacked and MD5 sums checked
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (evaluate)
+* installing *source* package ‘digest’ ...
+** package ‘digest’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c aes.c -o aes.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c crc32.c -o crc32.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c digest.c -o digest.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c init.c -o init.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c md5.c -o md5.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c pmurhash.c -o pmurhash.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c raes.c -o raes.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c sha1.c -o sha1.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c sha2.c -o sha2.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c sha256.c -o sha256.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c xxhash.c -o xxhash.o
+gcc -std=gnu99 -shared -o digest.so aes.o crc32.o digest.o init.o md5.o pmurhash.o raes.o sha1.o sha2.o sha256.o xxhash.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/digest/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (digest)
+* installing *source* package ‘formatR’ ...
+** package ‘formatR’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (formatR)
+* installing *source* package ‘highr’ ...
+** package ‘highr’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (highr)
+* installing *source* package ‘GO.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'GO.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/GO.db’
+* installing *source* package ‘xtable’ ...
+** package ‘xtable’ successfully unpacked and MD5 sums checked
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (xtable)
+* installing *source* package ‘R.methodsS3’ ...
+** package ‘R.methodsS3’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (R.methodsS3)
+* installing *source* package ‘gtable’ ...
+** package ‘gtable’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (gtable)
+* installing *source* package ‘reshape2’ ...
+** package ‘reshape2’ successfully unpacked and MD5 sums checked
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c RcppExports.cpp -o RcppExports.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"   -fpic  -O3 -pipe  -g  -c melt.cpp -o melt.o
+g++ -shared -o reshape2.so RcppExports.o melt.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/reshape2/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (reshape2)
+* installing *source* package ‘proto’ ...
+** package ‘proto’ successfully unpacked and MD5 sums checked
+** R
+** demo
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+   ‘proto.Rnw’ 
+   ‘protoref.Rnw’ 
+** testing if installed package can be loaded
+* DONE (proto)
+* installing *source* package ‘GenomicFeatures’ ...
+** R
+** inst
+** preparing package for lazy loading
+Error : object ‘sqliteQuickSQL’ is not exported by 'namespace:RSQLite'
+ERROR: lazy loading failed for package ‘GenomicFeatures’
+* removing ‘/usr/local/lib/R/site-library/GenomicFeatures’
+* installing *source* package ‘gridExtra’ ...
+** package ‘gridExtra’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (gridExtra)
+* installing *source* package ‘RcppArmadillo’ ...
+** package ‘RcppArmadillo’ successfully unpacked and MD5 sums checked
+* checking LAPACK_LIBS: divide-and-conquer complex SVD available via system LAPACK
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"  -I../inst/include -fpic  -O3 -pipe  -g  -c RcppArmadillo.cpp -o RcppArmadillo.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"  -I../inst/include -fpic  -O3 -pipe  -g  -c RcppExports.cpp -o RcppExports.o
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include"  -I../inst/include -fpic  -O3 -pipe  -g  -c fastLm.cpp -o fastLm.o
+g++ -shared -o RcppArmadillo.so RcppArmadillo.o RcppExports.o fastLm.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/RcppArmadillo/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (RcppArmadillo)
+* installing *source* package ‘locfit’ ...
+** package ‘locfit’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c S_enter.c -o S_enter.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c band.c -o band.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c dbinom.c -o dbinom.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c dens_haz.c -o dens_haz.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c dens_int.c -o dens_int.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c dens_odi.c -o dens_odi.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c density.c -o density.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c ev_atree.c -o ev_atree.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c ev_interp.c -o ev_interp.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c ev_kdtre.c -o ev_kdtre.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c ev_main.c -o ev_main.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c ev_sphere.c -o ev_sphere.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c ev_trian.c -o ev_trian.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c family.c -o family.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c fitted.c -o fitted.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c frend.c -o frend.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c lf_adap.c -o lf_adap.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c lf_dercor.c -o lf_dercor.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c lf_fitfun.c -o lf_fitfun.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c lf_nbhd.c -o lf_nbhd.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c lf_robust.c -o lf_robust.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c lf_vari.c -o lf_vari.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c lf_wdiag.c -o lf_wdiag.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c lfstr.c -o lfstr.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c locfit.c -o locfit.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_chol.c -o m_chol.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_eigen.c -o m_eigen.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_icirc.c -o m_icirc.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_imont.c -o m_imont.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_isimp.c -o m_isimp.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_isphr.c -o m_isphr.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_jacob.c -o m_jacob.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_max.c -o m_max.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_qr.c -o m_qr.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_solve.c -o m_solve.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_svd.c -o m_svd.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c m_vector.c -o m_vector.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c math.c -o math.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c minmax.c -o minmax.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c pcomp.c -o pcomp.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c preplot.c -o preplot.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c prob.c -o prob.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c procv.c -o procv.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c scb.c -o scb.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c scb_cons.c -o scb_cons.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c scb_crit.c -o scb_crit.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c scb_iface.c -o scb_iface.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c simul.c -o simul.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c smisc.c -o smisc.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c startlf.c -o startlf.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c weight.c -o weight.o
+gcc -std=gnu99 -shared -o locfit.so S_enter.o band.o dbinom.o dens_haz.o dens_int.o dens_odi.o density.o ev_atree.o ev_interp.o ev_kdtre.o ev_main.o ev_sphere.o ev_trian.o family.o fitted.o frend.o lf_adap.o lf_dercor.o lf_fitfun.o lf_nbhd.o lf_robust.o lf_vari.o lf_wdiag.o lfstr.o locfit.o m_chol.o m_eigen.o m_icirc.o m_imont.o m_isimp.o m_isphr.o m_jacob.o m_max.o m_qr.o m_solve.o m_svd.o m_vector.o math.o minmax.o pcomp.o preplot.o prob.o procv.o scb.o scb_cons.o scb_crit.o scb_iface.o simul.o smisc.o startlf.o weight.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/locfit/libs
+** R
+** data
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (locfit)
+* installing *source* package ‘RColorBrewer’ ...
+** package ‘RColorBrewer’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (RColorBrewer)
+* installing *source* package ‘hwriter’ ...
+** package ‘hwriter’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (hwriter)
+* installing *source* package ‘PFAM.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'PFAM.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/PFAM.db’
+* installing *source* package ‘munsell’ ...
+** package ‘munsell’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (munsell)
+* installing *source* package ‘latticeExtra’ ...
+** package ‘latticeExtra’ successfully unpacked and MD5 sums checked
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (latticeExtra)
+* installing *source* package ‘markdown’ ...
+** package ‘markdown’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c Rbase64.c -o Rbase64.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c Rinit.c -o Rinit.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c Rmarkdown.c -o Rmarkdown.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c autolink.c -o autolink.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c buffer.c -o buffer.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c houdini_href_e.c -o houdini_href_e.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c houdini_html_e.c -o houdini_html_e.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c html.c -o html.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c html_smartypants.c -o html_smartypants.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c markdown.c -o markdown.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c stack.c -o stack.o
+gcc -std=gnu99 -shared -o markdown.so Rbase64.o Rinit.o Rmarkdown.o autolink.o buffer.o houdini_href_e.o houdini_html_e.o html.o html_smartypants.o markdown.o stack.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/markdown/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (markdown)
+ERROR: dependency ‘org.Hs.eg.db’ is not available for package ‘AnnotationForge’
+* removing ‘/usr/local/lib/R/site-library/AnnotationForge’
+* installing *source* package ‘R.oo’ ...
+** package ‘R.oo’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (R.oo)
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘VariantAnnotation’
+* removing ‘/usr/local/lib/R/site-library/VariantAnnotation’
+* installing *source* package ‘annotate’ ...
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (annotate)
+* installing *source* package ‘genefilter’ ...
+** libs
+g++ -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c half_range_mode.cpp -o half_range_mode.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c init.c -o init.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c nd.c -o nd.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c pAUC.c -o pAUC.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c rowPAUCs.c -o rowPAUCs.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c rowttests.c -o rowttests.o
+gfortran   -fpic  -O3 -pipe  -g  -c ttest.f -o ttest.o
+g++ -shared -o genefilter.so half_range_mode.o init.o nd.o pAUC.o rowPAUCs.o rowttests.o ttest.o -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/genefilter/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+Creating a generic function for ‘plot’ from package ‘graphics’ in package ‘genefilter’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (genefilter)
+* installing *source* package ‘scales’ ...
+** package ‘scales’ successfully unpacked and MD5 sums checked
+** R
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (scales)
+* installing *source* package ‘knitr’ ...
+** package ‘knitr’ successfully unpacked and MD5 sums checked
+** R
+** demo
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (knitr)
+* installing *source* package ‘GSEABase’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (GSEABase)
+* installing *source* package ‘R.utils’ ...
+** package ‘R.utils’ successfully unpacked and MD5 sums checked
+** R
+** inst
+** preparing package for lazy loading
+Warning in setGenericS3.default(name, export = exportGeneric, envir = envir,  :
+  Renamed the preexisting function warnings to warnings.default, which was defined in environment base.
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (R.utils)
+ERROR: dependency ‘GO.db’ is not available for package ‘Category’
+* removing ‘/usr/local/lib/R/site-library/Category’
+* installing *source* package ‘ggplot2’ ...
+** package ‘ggplot2’ successfully unpacked and MD5 sums checked
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (ggplot2)
+* installing *source* package ‘DESeq2’ ...
+** libs
+g++ -I/usr/share/R/include -DNDEBUG   -I"/usr/local/lib/R/site-library/Rcpp/include" -I"/usr/local/lib/R/site-library/RcppArmadillo/include"   -fpic  -O3 -pipe  -g  -c DESeq2.cpp -o DESeq2.o
+g++ -shared -o DESeq2.so DESeq2.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/DESeq2/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (DESeq2)
+* installing *source* package ‘Hmisc’ ...
+** package ‘Hmisc’ successfully unpacked and MD5 sums checked
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c Hmisc.c -o Hmisc.o
+gfortran   -fpic  -O3 -pipe  -g  -c cidxcn.f -o cidxcn.o
+gfortran   -fpic  -O3 -pipe  -g  -c cidxcp.f -o cidxcp.o
+gfortran   -fpic  -O3 -pipe  -g  -c hoeffd.f -o hoeffd.o
+gfortran   -fpic  -O3 -pipe  -g  -c jacklins.f -o jacklins.o
+gfortran   -fpic  -O3 -pipe  -g  -c largrec.f -o largrec.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c mChoice.c -o mChoice.o
+gfortran   -fpic  -O3 -pipe  -g  -c maxempr.f -o maxempr.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c nstr.c -o nstr.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c ranksort.c -o ranksort.o
+gfortran   -fpic  -O3 -pipe  -g  -c rcorr.f -o rcorr.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c string_box.c -o string_box.o
+gfortran   -fpic  -O3 -pipe  -g  -c wclosest.f -o wclosest.o
+gcc -std=gnu99 -shared -o Hmisc.so Hmisc.o cidxcn.o cidxcp.o hoeffd.o jacklins.o largrec.o mChoice.o maxempr.o nstr.o ranksort.o rcorr.o string_box.o wclosest.o -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/Hmisc/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (Hmisc)
+ERROR: dependencies ‘Category’, ‘GO.db’, ‘AnnotationForge’ are not available for package ‘GOstats’
+* removing ‘/usr/local/lib/R/site-library/GOstats’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘biovizBase’
+* removing ‘/usr/local/lib/R/site-library/biovizBase’
+ERROR: dependencies ‘biovizBase’, ‘GenomicFeatures’, ‘VariantAnnotation’ are not available for package ‘ggbio’
+* removing ‘/usr/local/lib/R/site-library/ggbio’
+ERROR: dependencies ‘Category’, ‘GOstats’, ‘PFAM.db’, ‘ggbio’ are not available for package ‘ReportingTools’
+* removing ‘/usr/local/lib/R/site-library/ReportingTools’
+
+The downloaded source packages are in
+	‘/tmp/RtmpWiwO3o/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'Mus.musculus'
+also installing the dependencies ‘OrganismDbi’, ‘GenomicFeatures’, ‘GO.db’, ‘org.Mm.eg.db’, ‘TxDb.Mmusculus.UCSC.mm10.knownGene’
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/OrganismDbi_1.4.0.tar.gz'
+Content type 'application/x-gzip' length 159819 bytes (156 Kb)
+opened URL
+==================================================
+downloaded 156 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/GenomicFeatures_1.14.5.tar.gz'
+Content type 'application/x-gzip' length 814511 bytes (795 Kb)
+opened URL
+==================================================
+downloaded 795 Kb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/GO.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 26094175 bytes (24.9 Mb)
+opened URL
+==================================================
+downloaded 24.9 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/org.Mm.eg.db_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 50728674 bytes (48.4 Mb)
+opened URL
+==================================================
+downloaded 48.4 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/TxDb.Mmusculus.UCSC.mm10.knownGene_2.10.1.tar.gz'
+Content type 'application/x-gzip' length 13807340 bytes (13.2 Mb)
+opened URL
+==================================================
+downloaded 13.2 Mb
+
+trying URL 'http://bioconductor.org/packages/2.13/data/annotation/src/contrib/Mus.musculus_1.1.2.tar.gz'
+Content type 'application/x-gzip' length 1518 bytes
+opened URL
+==================================================
+downloaded 1518 bytes
+
+* installing *source* package ‘GenomicFeatures’ ...
+** R
+** inst
+** preparing package for lazy loading
+Error : object ‘sqliteQuickSQL’ is not exported by 'namespace:RSQLite'
+ERROR: lazy loading failed for package ‘GenomicFeatures’
+* removing ‘/usr/local/lib/R/site-library/GenomicFeatures’
+* installing *source* package ‘GO.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'GO.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/GO.db’
+* installing *source* package ‘org.Mm.eg.db’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+Error : .onLoad failed in loadNamespace() for 'org.Mm.eg.db', details:
+  call: match.arg(synchronous, c("off", "normal", "full"))
+  error: 'arg' must be NULL or a character vector
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/usr/local/lib/R/site-library/org.Mm.eg.db’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘OrganismDbi’
+* removing ‘/usr/local/lib/R/site-library/OrganismDbi’
+ERROR: dependency ‘GenomicFeatures’ is not available for package ‘TxDb.Mmusculus.UCSC.mm10.knownGene’
+* removing ‘/usr/local/lib/R/site-library/TxDb.Mmusculus.UCSC.mm10.knownGene’
+ERROR: dependencies ‘OrganismDbi’, ‘GenomicFeatures’, ‘GO.db’, ‘org.Mm.eg.db’, ‘TxDb.Mmusculus.UCSC.mm10.knownGene’ are not available for package ‘Mus.musculus’
+* removing ‘/usr/local/lib/R/site-library/Mus.musculus’
+
+The downloaded source packages are in
+	‘/tmp/RtmpWiwO3o/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'limma'
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/limma_3.18.13.tar.gz'
+Content type 'application/x-gzip' length 1048134 bytes (1023 Kb)
+opened URL
+==================================================
+downloaded 1023 Kb
+
+* installing *source* package ‘limma’ ...
+** libs
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG      -fpic  -O3 -pipe  -g  -c normexp.c -o normexp.o
+gcc -std=gnu99 -shared -o limma.so normexp.o -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/limma/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (limma)
+
+The downloaded source packages are in
+	‘/tmp/RtmpWiwO3o/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+BioC_mirror: http://bioconductor.org
+Using Bioconductor version 2.13 (BiocInstaller 1.12.1), R version 3.0.2.
+Installing package(s) 'edgeR'
+trying URL 'http://bioconductor.org/packages/2.13/bioc/src/contrib/edgeR_3.4.2.tar.gz'
+Content type 'application/x-gzip' length 1126311 bytes (1.1 Mb)
+opened URL
+==================================================
+downloaded 1.1 Mb
+
+* installing *source* package ‘edgeR’ ...
+** libs
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_exact_test_by_deviance.cpp -o R_exact_test_by_deviance.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_loess_by_col.cpp -o R_loess_by_col.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_cr_adjust.cpp -o R_cr_adjust.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_levenberg.cpp -o R_levenberg.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_maximize_interpolant.cpp -o R_maximize_interpolant.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_one_group.cpp -o R_one_group.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c R_simple_good_turing.cpp -o R_simple_good_turing.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/adj_coxreid.cpp -o core/adj_coxreid.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/glm_levenberg.cpp -o core/glm_levenberg.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/glm_one_group.cpp -o core/glm_one_group.o
+g++ -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/interpolator.cpp -o core/interpolator.o
+gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -I./core -I.      -fpic  -O3 -pipe  -g  -c core/fmm_spline.c -o core/fmm_spline.o
+g++ -shared -o edgeR.so R_exact_test_by_deviance.o R_loess_by_col.o R_cr_adjust.o R_levenberg.o R_maximize_interpolant.o R_one_group.o R_simple_good_turing.o core/adj_coxreid.o core/glm_levenberg.o core/glm_one_group.o core/interpolator.o core/fmm_spline.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /usr/local/lib/R/site-library/edgeR/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (edgeR)
+
+The downloaded source packages are in
+	‘/tmp/RtmpWiwO3o/downloaded_packages’
+Old packages: 'boot', 'class', 'cluster', 'codetools', 'foreign', 'KernSmooth',
+  'lattice', 'Matrix', 'mgcv', 'nlme', 'nnet', 'rpart', 'spatial', 'survival'
+There were 20 warnings (use warnings() to see them)
+> 
+ 
+-e >>>>> end of r_prep ...
+
+-e >>>>> start python_prep ...
+ 
+Requirement already satisfied (use --upgrade to upgrade): python-dateutil in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in /usr/lib/python2.7/dist-packages (from python-dateutil)
+Requirement already satisfied (use --upgrade to upgrade): bioblend in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): requests>=1.1.0 in /usr/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): poster in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): boto>=2.9.7 in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): pyyaml in /usr/local/lib/python2.7/dist-packages (from bioblend)
+Requirement already satisfied (use --upgrade to upgrade): pandas in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): python-dateutil in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): pytz>=2011k in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): numpy>=1.7.0 in /usr/local/lib/python2.7/dist-packages (from pandas)
+Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in /usr/lib/python2.7/dist-packages (from python-dateutil->pandas)
+Requirement already satisfied (use --upgrade to upgrade): grequests in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): gevent in /usr/local/lib/python2.7/dist-packages (from grequests)
+Requirement already satisfied (use --upgrade to upgrade): requests>=1.0.0 in /usr/lib/python2.7/dist-packages (from grequests)
+Requirement already satisfied (use --upgrade to upgrade): greenlet in /usr/local/lib/python2.7/dist-packages (from gevent->grequests)
+Requirement already satisfied (use --upgrade to upgrade): GitPython in /usr/local/lib/python2.7/dist-packages
+Requirement already satisfied (use --upgrade to upgrade): gitdb>=0.6.4 in /usr/local/lib/python2.7/dist-packages (from GitPython)
+Requirement already satisfied (use --upgrade to upgrade): smmap>=0.8.5 in /usr/local/lib/python2.7/dist-packages (from gitdb>=0.6.4->GitPython)
+Requirement already satisfied (use --upgrade to upgrade): pip-tools in /usr/local/lib/python2.7/dist-packages
+No update information found for apt-xapian-index
+chardet==2.3.0 is available (you have 2.0.1)
+python-apt==0.7.8 is available (you have =0.9.3.5ubuntu1)
+python-debian==0.1.23 is available (you have =0.1.21-nmu2ubuntu2)
+requests==2.5.3 is available (you have 2.2.1)
+six==1.9.0 is available (you have 1.5.2)
+ssh-import-id==4.1 is available (you have 3.21)
+urllib3==1.10.2 is available (you have 1.7.1)
+ 
+-e >>>>> end of python_prep ...
+
+-e >>>>> start samtools_prep ...
+ 
+-e samtools already downloaded.
+-e samtools libbam.a already copied.
+-e samtools bam-dir already exists.
+-e samtools PATH already setting.
+ 
+-e >>>>> end of samtools_prep ...
+
+-e >>>>> start sailfish_prep ...
+ 
+-e sailfish already downloaded.
+-e sailfish PATH already setting.
+-e sailfish-lib in LD_LIBRARY_PATH already setting.
+ 
+-e >>>>> end of sailfish_prep ...
+
+-e >>>>> start setting_galaxy ...
+ 
+ 
+-e >>>>> end of setting_galaxy...
+
+Stopping galaxy... done.
+Starting galaxy... 
+...done.

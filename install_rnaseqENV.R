@@ -5,14 +5,22 @@ is.installed <- function(mypkg){
 if (!is.installed("dplyr")){
     install.packages('lazyeval', repos="http://cran.rstudio.com/")
     install.packages('dplyr', repos="http://cran.rstudio.com/")
+}
+if (!is.installed("plyr")){
 	install.packages('plyr', repos="http://cran.rstudio.com/")
+}
+if (!is.installed("tidyr")){
 	install.packages('tidyr', repos="http://cran.rstudio.com/")
+}
+if (!is.installed("stringr")){
 	install.packages('stringr', repos="http://cran.rstudio.com/")
 }
 
+source("http://bioconductor.org/biocLite.R")
 if (!is.installed("Mus.musculus")){
-	source("http://bioconductor.org/biocLite.R")
 	biocLite("Mus.musculus")
+}
+if (!is.installed("edgeR")){
 	biocLite("limma")
 	biocLite("edgeR")
 }

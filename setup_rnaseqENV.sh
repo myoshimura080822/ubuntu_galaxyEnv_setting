@@ -106,6 +106,7 @@ samtools_prep()
         tar jxvf $samtools_file
         cd $samtools_name
         make
+        chown -R $galaxy_user $samtools_path
     fi
 
     if [ ! -f $lib_dir/libbam.a ];then
@@ -147,6 +148,7 @@ sailfish_prep()
         echo -e "Download and Installing sailfish..."
         wget $sailfish_source
         tar zxvf $sailfish_file
+        chown -R $galaxy_user $sailfish_path
     fi
 
     if [ -z "$chk_sailfish_path" ]; then

@@ -38,6 +38,7 @@ sailfish_file='Sailfish-0.6.3-Linux_x86-64.tar.gz'
 sailfish_source='https://github.com/kingsfordgroup/sailfish/releases/download/v0.6.3/'$sailfish_file
 sailfish_path=$source_dir'/'$sailfish_name
 
+galaxy_user=$1
 galaxy_path=/usr/local/$1/galaxy-dist
 galaxy_ini='universe_wsgi.ini'
 galaxy_dep_dir='dependency_dir'
@@ -52,9 +53,6 @@ echo $bashrc_path
 echo $chk_samtools_path
 echo $chk_sailfish_path
 echo $chk_sailfish_lib
-
-
-
 
 # methods
 create_dir()
@@ -186,7 +184,8 @@ setting_galaxy()
     
     if [ -d $galaxy_path ]; then
         if [ ! -d $galaxy_path/$galaxy_dep_dir ]; then
-            mkdir $galaxy_path/$galaxy_dep_dir
+            mkdir -m 755 $galaxy_path/$galaxy_dep_dir
+            chown -R $galaxy_user $galaxy_path/$galaxy_dep_dir
         fi
         
         sed -i -e "s/#tool_dependency_dir/tool_dependency_dir/" $galaxy_path/$galaxy_ini

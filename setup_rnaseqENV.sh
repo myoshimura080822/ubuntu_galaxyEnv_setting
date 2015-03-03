@@ -191,9 +191,9 @@ setting_galaxy()
         fi
         
         sed -i -e "s/#tool_dependency_dir/tool_dependency_dir/" $galaxy_path/$galaxy_ini
-        sed -i -e "s/tool_dependency_dir = \(.*\)/tool_dependency_dir = $galaxy_dep_dir/" $galaxy_path/$galaxy_ini
+        sed -i -e "s/^tool_dependency_dir\(.*\)/tool_dependency_dir = $galaxy_dep_dir/" $galaxy_path/$galaxy_ini
         sed -i -e "s/#master_api_key/master_api_key/" $galaxy_path/$galaxy_ini
-        sed -i -e "s/master_api_key\(.*\)/master_api_key = $GALAXY_MASTER_API_KEY/" $galaxy_path/$galaxy_ini
+        sed -i -e "s/^master_api_key\(.*\)/master_api_key = $GALAXY_MASTER_API_KEY/" $galaxy_path/$galaxy_ini
     else
         echo "galaxy-dist Dir not found."
     fi

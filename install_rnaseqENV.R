@@ -17,6 +17,7 @@ if (!is.installed("stringr")){
 }
 
 source("http://bioconductor.org/biocLite.R")
+biocLite()
 if (!is.installed("Mus.musculus")){
 	biocLite("Mus.musculus")
 }

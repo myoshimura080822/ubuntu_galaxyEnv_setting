@@ -51,8 +51,8 @@ chk_samtools_path=`echo $PATH | grep $samtools_path`
 chk_sailfish_path=`echo $PATH | grep -e $sailfish_path/bin`
 chk_sailfish_lib=`echo $LD_LIBRARY_PATH | grep -e $sailfish_path/lib`
 
-bashrc_path='/etc/bash.bashrc'
-echo $bashrc_path
+env_val_set='/etc/profile'
+echo $env_val_set
 echo $chk_samtools_path
 echo $chk_sailfish_path
 echo $chk_sailfish_lib
@@ -128,8 +128,8 @@ samtools_prep()
     if [ -z "$chk_samtools_path" ]; then
         echo -e "samtools PATH setting..."
         echo $PATH 
-        echo PATH=\$PATH:$samtools_path >> $bashrc_path
-        echo export PATH >> $bashrc_path
+        echo PATH=\$PATH:$samtools_path >> $env_val_set
+        echo export PATH >> $env_val_set
         export PATH=$PATH:/usr/local/src/samtools-0.1.19
     else
         echo -e "samtools PATH already setting."
@@ -157,8 +157,8 @@ sailfish_prep()
     if [ -z "$chk_sailfish_path" ]; then
         echo -e "sailfieh PATH setting..."
         echo $PATH 
-        echo PATH=\$PATH:$sailfish_path/bin >> $bashrc_path
-        echo export PATH >> $bashrc_path
+        echo PATH=\$PATH:$sailfish_path/bin >> $env_val_set
+        echo export PATH >> $env_val_set
         export PATH=$PATH:/usr/local/src/Sailfish-0.6.3-Linux_x86-64/bin
     else
         echo -e "sailfish PATH already setting."
@@ -167,8 +167,8 @@ sailfish_prep()
     if [ -z "$chk_sailfish_lib" ] ; then
         echo -e "sailfish-lib PATH setting..."
         echo $LD_LIBRARY_PATH 
-        echo LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:$sailfish_path/lib >> $bashrc_path
-        echo export LD_LIBRARY_PATH >> $bashrc_path
+        echo LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:$sailfish_path/lib >> $env_val_set
+        echo export LD_LIBRARY_PATH >> $env_val_set
         if [ -f $sailfish_path/lib/libz.so.1 ]; then
             mv $sailfish_path/lib/libz.so.1 $sailfish_path/lib/libz.so.1_bk
         fi

@@ -5,9 +5,12 @@ echo " setup_rnaseqENV started ..."
 echo "################################################"
 echo " "
 
+galaxy_setting=1
+
 if [ $# -ne 1 ]; then
-    echo "Invalid argument. (require galaxy-user name)" 1>&2
-    exit 1
+    echo "Starting without galaxy-setting mode..." 1>&2
+    echo
+    galaxy_setting=0
 fi
 
 UID=`id | sed 's/uid=\([0-9]*\)(.*/\1/'`
@@ -188,6 +191,8 @@ setting_galaxy()
         if [ ! -d $galaxy_path/$galaxy_dep_dir ]; then
             mkdir -m 755 $galaxy_path/$galaxy_dep_dir
             chown -R $galaxy_user $galaxy_path/$galaxy_dep_dir
+        else
+            echo -e "galaxy tool_dependency_dir is already exist."
         fi
         
         sed -i -e "s/#tool_dependency_dir/tool_dependency_dir/" $galaxy_path/$galaxy_ini
@@ -212,9 +217,12 @@ main()
     echo
     sailfish_prep
     echo
-    setting_galaxy
-    echo
-    service galaxy restart
+
+    if [ $galaxy_setting -ne 0 ]; then
+        setting_galaxy
+        echo
+        service galaxy restart
+    fi
         
 }
 

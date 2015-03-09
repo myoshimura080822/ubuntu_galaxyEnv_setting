@@ -109,7 +109,7 @@ samtools_prep()
         tar jxvf $samtools_file
         cd $samtools_name
         make
-        chown -R $galaxy_user $samtools_path
+        chmod -R 755 $samtools_path
     fi
 
     if [ ! -f $lib_dir/libbam.a ];then
@@ -151,7 +151,7 @@ sailfish_prep()
         echo -e "Download and Installing sailfish..."
         wget $sailfish_source
         tar zxvf $sailfish_file
-        chown -R $galaxy_user $sailfish_path
+        chmod -R 755 $sailfish_path
     fi
 
     if [ -z "$chk_sailfish_path" ]; then
@@ -202,6 +202,9 @@ setting_galaxy()
     else
         echo "galaxy-dist Dir not found."
     fi
+
+    chown -R $galaxy_user:$galaxy_user $samtools_path
+    chown -R $galaxy_user:$galaxy_user $sailfish_path
 
     echo " "
     echo -e ">>>>> end of setting_galaxy..."

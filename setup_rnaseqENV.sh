@@ -72,6 +72,7 @@ r_prep()
 {
     echo -e ">>>>> start r_prep ..."
     echo " "
+    apt-get install libcurl4-openssl-dev libxml2-dev
     R --vanilla < $script_dir/install_rnaseqENV.R
     echo " "
     echo -e ">>>>> end of r_prep ..."
